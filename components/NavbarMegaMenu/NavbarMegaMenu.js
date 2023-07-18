@@ -25,7 +25,13 @@ const NavbarMegaMenu = () => {
 
         <div className="logo-wrapper">
           {/* <img className="logo" src="./images/logo-dan-toma.png" alt="logo" /> */}
-          <Image className="logo" src="./images/logo-dan-toma.png" alt="logo" />
+          <Image
+            className="logo"
+            width={40}
+            height={40}
+            src="/images/logo-dan-toma.png"
+            alt="logo"
+          />
           <span className="logo-small-text">DAN TOMA</span>
         </div>
 
