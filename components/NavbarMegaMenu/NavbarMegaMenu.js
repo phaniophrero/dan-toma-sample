@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { FaShoppingCart } from "react-icons/fa";
 import {
   navbarMegeMenuDataLeft,
@@ -23,7 +24,8 @@ const NavbarMegaMenu = () => {
         </ul>
 
         <div className="logo-wrapper">
-          <img className="logo" src="./images/logo-dan-toma.png" alt="logo" />
+          {/* <img className="logo" src="./images/logo-dan-toma.png" alt="logo" /> */}
+          <Image className="logo" src="./images/logo-dan-toma.png" alt="logo" />
           <span className="logo-small-text">DAN TOMA</span>
         </div>
 
@@ -147,7 +149,9 @@ const NavbarMegaMenu = () => {
                   </div>
                 </li>
                 <li className="mega-menu-submenu-item">
-                  <span className="mega-menu-submenu-item-title">How To's</span>
+                  <span className="mega-menu-submenu-item-title">
+                    How To&apos;s
+                  </span>
                   <div className="mega-menu-submenu-item-column">
                     <ul className="mega-menu-submenu-item-column-list">
                       <li className="mega-menu-submenu-item-column-item">
@@ -316,7 +320,9 @@ const NavbarMegaMenu = () => {
                   </div>
                 </li>
                 <li className="mega-menu-submenu-item">
-                  <span className="mega-menu-submenu-item-title">How To's</span>
+                  <span className="mega-menu-submenu-item-title">
+                    How To&apos;s
+                  </span>
                   <div className="mega-menu-submenu-item-column">
                     <ul className="mega-menu-submenu-item-column-list">
                       <li className="mega-menu-submenu-item-column-item">
