@@ -1,11 +1,13 @@
 .slider {
   overflow: hidden;
-  width: 700px;
+  width: 100%;
+  left: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  border-radius: 0.5rem;
+  //   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  //   border-radius: 0.5rem;
+  position: relative;
 }
 
 .inner {
@@ -18,8 +20,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 490px;
-  background-color: #fff;
+  //   height: 490px;
+  min-height: 67rem;
+  max-height: 80rem;
+  //   background-color: #fff;
 }
 
 .slide-link {
@@ -76,8 +80,13 @@
 
 .slider-buttons {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   color: $color-light-blue;
+  width: 90%;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .button-arrow {

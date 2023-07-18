@@ -4,6 +4,8 @@
 @import "../components/Slider/slider.scss";
 @import "../components/SectionCourses/section-courses.scss";
 
+@import "../components/CircleProgress/circle-progress.scss";
+
 @mixin font($font-family, $font-file) {
   @font-face {
     font-family: $font-family;
@@ -45,8 +47,9 @@ body {
 
 .main {
   width: 100%;
-  max-width: 1600px;
+  // max-width: 1600px;
   margin: 0 auto;
+  // padding: 0 20px;
 }
 
 ul {
@@ -70,6 +73,7 @@ a {
   top: 90px;
   left: 0;
   height: 3.8rem;
+  z-index: 99;
 
   .discount-text {
     width: 100%;
@@ -83,6 +87,18 @@ a {
 }
 
 // Video Area
+.hero-area {
+  margin-top: 128px;
+  width: 100%;
+  max-height: 80rem;
+  // position: absolute;
+  // top: 128px;
+  // left: 0;
+  overflow: hidden;
+  border-bottom-right-radius: 15rem;
+  border-bottom-left-radius: 15rem;
+}
+
 .hero-video-area {
   width: 100%;
   max-height: 80rem;

@@ -39,58 +39,56 @@ export const Slider = () => {
     <div className="slider">
       <div
         className="inner"
-        style={{ transform: `translate (-${activeIndex * 100}%)` }}
+        style={{ transform: `translate(-${activeIndex * 100}%)` }}
       >
         {items.map((item, index) => {
           return <SliderItem item={item} key={index} width={"100%"} />;
         })}
-        <div className="slider-buttons">
-          <button
-            onClick={() => updateIndex(activeIndex - 1)}
-            className="button-arrow"
-          >
-            <span className="btn-arrow-icon btn-arrow-icon-left">
-              <BsArrowLeft />
-            </span>{" "}
-            prev
-          </button>
+      </div>
+      <div className="slider-buttons">
+        <button
+          onClick={() => updateIndex(activeIndex - 1)}
+          className="button-arrow"
+        >
+          <span className="btn-arrow-icon btn-arrow-icon-left">
+            <BsArrowLeft />
+          </span>{" "}
+          prev
+        </button>
 
-          <div className="indicators">
+        {/* <div className="indicators">
             {items.map((item, index) => (
               <ProgressBar item={item} index={index} />
             ))}
-          </div>
-
-          {/* <div className="indicators">
-            {items.map((item, index) => {
-              return (
-                <button
-                  onClick={() => {
-                    updateIndex(index);
-                  }}
-                  key={index}
-                  className="indicator-buttons-dot"
-                >
-                  <span
-                    className={`dot ${
-                      index === activeIndex ? "dot-active" : ""
-                    }`}
-                  ></span>
-                </button>
-              );
-            })}
           </div> */}
-          <button
-            onClick={() => updateIndex(activeIndex + 1)}
-            className="button-arrow"
-          >
-            next{" "}
-            {/* <span className="btn-arrow-icon btn-arrow-icon-right">
-              <BsArrowRight />
-            </span> */}
-            <span className="arrow-right"></span>
-          </button>
+
+        <div className="indicators">
+          {items.map((item, index) => {
+            return (
+              <button
+                onClick={() => {
+                  updateIndex(index);
+                }}
+                key={index}
+                className="indicator-buttons-dot"
+              >
+                <span
+                  className={`dot ${index === activeIndex ? "dot-active" : ""}`}
+                ></span>
+              </button>
+            );
+          })}
         </div>
+        <button
+          onClick={() => updateIndex(activeIndex + 1)}
+          className="button-arrow"
+        >
+          next{" "}
+          <span className="btn-arrow-icon btn-arrow-icon-right">
+            <BsArrowRight />
+          </span>
+          {/* <span className="arrow-right"></span> */}
+        </button>
       </div>
     </div>
   );

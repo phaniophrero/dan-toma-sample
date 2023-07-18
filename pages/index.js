@@ -5,6 +5,7 @@ import NavbarMegaMenu from "../components/NavbarMegaMenu/NavbarMegaMenu";
 import CountdownTimer from "../components/CountdownTimer/CountdownTimer";
 import { Slider } from "../components/Slider/Slider";
 import SectionCourses from "../components/SectionCourses/SectionCourses";
+import CircleProgress from "../components/CircleProgress/CircleProgress";
 
 export default function Home() {
   const THREE_DAYS_IN_MS = 3 * 24 * 60 * 60 * 1000;
@@ -30,7 +31,9 @@ export default function Home() {
           </h3>
         </div>
         {/* Video Slider */}
-        <Slider />
+        <div className="hero-area">
+          <Slider />
+        </div>
         {/* Hard coded Section Hero */}
         {/* <section className="hero-video-area">
           <div className="text-bg">
@@ -60,8 +63,8 @@ export default function Home() {
             </video>
           </div>
         </section> */}
-
         <SectionCourses />
+        <CircleProgress />
       </main>
     </div>
   );

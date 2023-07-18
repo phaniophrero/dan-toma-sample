@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 
-export const SliderItem = ({ item, index }) => {
+export const SliderItem = ({ item, index, width }) => {
   return (
-    <div className="slider-item" key={index}>
+    <div className="slider-item" key={index} style={{ width: width }}>
       <section className="hero-video-area">
         <div className="text-bg">
           <span className={item.className ? "" : "bg-patrat"}></span>

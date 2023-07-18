@@ -1,0 +1,46 @@
+.circle-svg {
+  width: 500px;
+  height: 500px;
+
+  svg circle {
+    fill: none;
+    stroke-width: 5px;
+    stroke-linecap: round;
+  }
+
+  svg circle.bg {
+    stroke: #4e4e4e;
+  }
+
+  svg circle.meter {
+    stroke: #ff7a59;
+    stroke-dashoffset: 300px;
+    stroke-dasharray: 300px;
+    animation: prog 10s linear forwards;
+    // animation: prog 10s linear forwards, glow 1s 9s ease-in-out forwards;
+  }
+
+  @keyframes prog {
+    0% {
+      stroke-dashoffset: 300px;
+    }
+    20% {
+      stroke-dashoffset: 200px;
+    }
+    30% {
+      stroke-dashoffset: 190px;
+    }
+    80% {
+      stroke-dashoffset: 100px;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  //   @keyframes glow {
+  //     100% {
+  //       filter: drop-shadow(0 0 3px #ff7a59);
+  //     }
+  //   }
+}
