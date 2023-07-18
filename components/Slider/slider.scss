@@ -1,0 +1,210 @@
+.slider {
+  overflow: hidden;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 0.5rem;
+}
+
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.slider-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 490px;
+  background-color: #fff;
+}
+
+.slide-link {
+  display: flex;
+  align-items: center;
+  color: $color-light-blue;
+  font-size: 1.6rem;
+  font-family: "Montserrat-Medium";
+  margin-top: 10rem;
+
+  &:hover {
+    animation: none;
+  }
+
+  .slide-link-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    animation: nudge 1s linear infinite alternate;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+  }
+
+  @keyframes nudge {
+    0%,
+    40% {
+      transform: translate(0px, 0);
+    }
+    20% {
+      transform: translate(10px, 0);
+    }
+  }
+}
+
+.slide-item-text {
+  font-size: 1.6rem;
+  margin: 40px 0 40px 0;
+  padding: 0 20px 0 20px;
+  white-space: normal;
+  color: #617d98;
+}
+
+.slide-image-wrapper {
+  display: flex;
+  width: 250px;
+  padding: 0 20px 0 20px;
+}
+.slide-image {
+  display: flex;
+  width: 100%;
+}
+
+.slider-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  color: $color-light-blue;
+}
+
+.button-arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  color: $color-light-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .btn-arrow-icon {
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-arrow-icon-left {
+    margin-right: 1rem;
+  }
+  .btn-arrow-icon-right {
+    margin-left: 1rem;
+  }
+
+  .arrow-right {
+    display: flex;
+    align-items: center;
+    position: relative;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    height: 20px;
+    width: 90px;
+    margin-left: 1rem;
+  }
+  .arrow-right::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    margin-top: -5px;
+    margin-left: -5px;
+    width: 10px;
+    height: 10px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform: rotate(-45deg);
+    transition: 160ms ease-out 80ms;
+  }
+  .arrow-right::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    width: 20px;
+    height: 1px;
+    background-color: #fff;
+    transition: 160ms ease-out 80ms;
+  }
+  .arrow-right:hover::before {
+    transform: translateX(10px) rotate(-45deg);
+  }
+  .arrow-right:hover::after {
+    width: 35px;
+  }
+}
+
+.indicators {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  color: $color-light-blue;
+  position: relative;
+}
+
+// SVG Circle
+.circle-center {
+  background: $color-light-blue;
+}
+
+.circle-static {
+  position: absolute;
+  border: 0.15rem solid $color-light-blue;
+  top: 0%;
+  left: 0%;
+  transform: translate(7%, 7%);
+  height: 22px;
+  width: 22px;
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.indicator-buttons-dot {
+  border: none;
+  cursor: pointer;
+  color: $color-light-blue;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.indicators > button {
+  margin: 5px;
+  background: none;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: $color-light-blue;
+  border-radius: 100%;
+  z-index: 100;
+  position: absolute;
+}
+
+.dot-active {
+  background-color: transparent;
+  position: relative;
+}
+.dot-active::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: $color-blue;
+}

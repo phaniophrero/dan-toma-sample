@@ -1,0 +1,173 @@
+import { FaShoppingCart } from "react-icons/fa";
+
+export const navbarMegeMenuDataLeft = [
+  {
+    id: 1,
+    tab: "Home",
+  },
+  {
+    id: 2,
+    tab: "Courses",
+  },
+  {
+    id: 3,
+    tab: "Discord & Telegram",
+    // tab2: "CHART ANALYSIS",
+  },
+  {
+    id: 4,
+    tab: "Mentoring",
+  },
+];
+
+export const navbarMegeMenuDataRight = [
+  {
+    id: 6,
+    tab: "Trading Strategies",
+    submenu: [
+      {
+        id: 6.1,
+        submenuTab: "Strategies",
+        submenuTabItems: [
+          {
+            item: "Penny Stocks",
+          },
+          {
+            item: "Momentum",
+          },
+          {
+            item: "Reversal",
+          },
+          {
+            item: "Gap and Go",
+          },
+          {
+            item: "Bull Flag",
+          },
+          {
+            item: "Swing Trading",
+          },
+        ],
+      },
+      {
+        id: 6.2,
+        submenuTab: "Guides",
+        submenuTabItems: [
+          {
+            item: "Day Trading Guide",
+          },
+          {
+            item: "Options Trading Guide",
+          },
+          {
+            item: "Small Account Guide",
+          },
+          {
+            item: "Stock Broker Guide",
+          },
+          {
+            item: "Stock Order Types Guide",
+          },
+          {
+            item: "Swing Trading Guide",
+          },
+          {
+            item: "Technical Analysis Guide",
+          },
+          {
+            item: "Margin vs. Cash Account",
+          },
+          {
+            item: "Large Cap vs Small Cap",
+          },
+        ],
+      },
+      {
+        id: 6.3,
+        submenuTab: "How To's",
+        submenuTabItems: [
+          {
+            item: "How to Day Trade Without $25k",
+          },
+          {
+            item: "How to Make a Living",
+          },
+          {
+            item: "How to Get Around PDT",
+          },
+          {
+            item: "How to Use Multiple Time Frames",
+          },
+          {
+            item: "How to Use Hot Keys",
+          },
+          {
+            item: "How to Use Scanners",
+          },
+          {
+            item: "How to Short Stocks",
+          },
+        ],
+      },
+      {
+        id: 6.4,
+        submenuTab: "Stock Quotes",
+        submenuTabItems: [
+          {
+            item: "Apple (AAPL)",
+          },
+          {
+            item: "Meta (META)",
+          },
+          {
+            item: "Tesla (TSLA)",
+          },
+          {
+            item: "Amazon (AMZN)",
+          },
+          {
+            item: "Netflix (NFLX)",
+          },
+          {
+            item: "Google (GOOGLE)",
+          },
+        ],
+        submenuTab2: "Crypto Quotes",
+        submenuTabItems2: [
+          {
+            item: "Bitcoin (BTC)",
+          },
+          {
+            item: "Ethereum (ETH)",
+          },
+          {
+            item: "Dodgecoin (DOGE)",
+          },
+          {
+            item: "Cardano (ADA)",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 7,
+    tab: "Resources",
+  },
+  {
+    id: 8,
+    tab: "About",
+  },
+  {
+    id: 9,
+    iconCart: <FaShoppingCart />,
+  },
+  {
+    id: 10,
+    tab: "Sign in",
+  },
+  {
+    id: 11,
+    tab: "Sign up",
+  },
+];
