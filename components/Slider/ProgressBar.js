@@ -44,10 +44,10 @@ const ProgressBar = ({ item, index }) => {
   //   };
 
   return (
-    <>
+    <div key={index}>
       <div className="circle-static"></div>
       <svg
-        key={index}
+        // key={index}
         width={sqSize}
         height={sqSize}
         viewBox={viewBox}
@@ -80,7 +80,7 @@ const ProgressBar = ({ item, index }) => {
           fill="#0062ff"
         />
       </svg>
-    </>
+    </div>
   );
 };
 
