@@ -8,6 +8,7 @@ export const Slider = () => {
 
   const items = [
     {
+      id: 1,
       video: "/video/video.mp4",
       title: "Welcome",
       //   path: "",
@@ -16,6 +17,7 @@ export const Slider = () => {
         "Imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n’a pas fait que survivre cinq siècles, mais s’est aussi adapt à la bureautique informatique, sans que son contenu n’en soit modifié.",
     },
     {
+      id: 2,
       video: "/video/video-2.mp4",
       title: "Dan Toma",
       path: "/dan-toma",
@@ -42,7 +44,7 @@ export const Slider = () => {
         style={{ transform: `translate(-${activeIndex * 100}%)` }}
       >
         {items.map((item, index) => {
-          return <SliderItem item={item} key={index} width={"100%"} />;
+          return <SliderItem item={item} key={item.id} width={"100%"} />;
         })}
       </div>
       <div className="slider-buttons">
