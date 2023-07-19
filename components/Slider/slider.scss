@@ -12,7 +12,7 @@
 
 .inner {
   white-space: nowrap;
-  transition: transform 0.3s;
+  transition: transform 1s ease-in-out;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
@@ -80,13 +80,19 @@
 
 .slider-buttons {
   display: flex;
-  justify-content: space-between;
+  //   justify-content: space-between;
+  gap: 2rem;
   color: $color-light-blue;
   width: 90%;
   position: absolute;
   bottom: 40px;
   left: 50%;
   transform: translate(-50%, 0);
+}
+
+.slider-buttons-right {
+  display: flex;
+  gap: 2rem;
 }
 
 .button-arrow {
@@ -102,6 +108,7 @@
   .btn-arrow-icon {
     display: flex;
     align-items: center;
+    width: 2.5rem;
   }
 
   .btn-arrow-icon-left {
@@ -155,12 +162,16 @@
 
 .indicators {
   display: flex;
+  justify-self: center;
   justify-content: space-around;
   align-items: center;
   margin-top: 20px;
-  color: $color-light-blue;
-  position: relative;
   gap: 3rem;
+  color: $color-light-blue;
+  //   position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 // SVG Circle

@@ -4,6 +4,11 @@ import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import ProgressBar from "./ProgressBar";
 import { slides } from "../../data/sliderData.json";
 import Circle from "../CircleProgress/Circle";
+import Image from "next/image";
+import arrowLeft from "../../public/images/arrow-left.svg";
+import arrowRight from "../../public/images/arrow-left.svg";
+
+import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 
 export const Slider = ({ autoplayInterval }) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -53,15 +58,29 @@ export const Slider = ({ autoplayInterval }) => {
         })}
       </div>
       <div className="slider-buttons">
-        <button
-          //   onClick={() => updateIndex(activeIndex - 1)}
-          onClick={prevSlide}
-          className="button-arrow"
-        >
-          <span className="btn-arrow-icon btn-arrow-icon-left">
-            <BsArrowLeft />
-          </span>{" "}
-        </button>
+        <div className="slider-buttons-right">
+          <button
+            //   onClick={() => updateIndex(activeIndex - 1)}
+            onClick={prevSlide}
+            className="button-arrow"
+          >
+            <span className="btn-arrow-icon btn-arrow-icon-left">
+              <IoIosArrowDropleft />
+            </span>{" "}
+            Prev
+          </button>
+          <button
+            //   onClick={() => updateIndex(activeIndex + 1)}
+            onClick={nextSlide}
+            className="button-arrow"
+          >
+            Next
+            <span className="btn-arrow-icon btn-arrow-icon-right">
+              <IoIosArrowDropright />
+            </span>
+            {/* <span className="arrow-right"></span> */}
+          </button>
+        </div>
         {/* 
         <div className="indicators">
           <Circle
@@ -93,16 +112,6 @@ export const Slider = ({ autoplayInterval }) => {
             );
           })}
         </div>
-        <button
-          //   onClick={() => updateIndex(activeIndex + 1)}
-          onClick={nextSlide}
-          className="button-arrow"
-        >
-          <span className="btn-arrow-icon btn-arrow-icon-right">
-            <BsArrowRight />
-          </span>
-          {/* <span className="arrow-right"></span> */}
-        </button>
       </div>
     </div>
   );
