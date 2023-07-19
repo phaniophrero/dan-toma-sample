@@ -35,6 +35,9 @@
 
 .nav-quotes-wrapper {
   position: relative;
+  min-width: 5rem;
+  max-width: 17rem;
+  white-space: nowrap;
 }
 
 .quotes-container {
