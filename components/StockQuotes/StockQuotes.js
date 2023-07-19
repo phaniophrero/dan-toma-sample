@@ -81,12 +81,13 @@ const StockQuotes = () => {
               {quotesData.map((quote, index) => (
                 <div
                   className="quote"
+                  key={index}
                   style={{
                     display: `${tabActive === index ? "flex" : " none"}`,
                   }}
                 >
-                  {quote.quotes.map((tabData) => (
-                    <div className="quote-card">
+                  {quote.quotes.map((tabData, index) => (
+                    <div className="quote-card" key={tabData.id}>
                       <span
                         className={`${
                           tabData.icon.type.name === "FaArrowDown"
