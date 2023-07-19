@@ -5,6 +5,7 @@
 @import "../components/SectionCourses/section-courses.scss";
 
 @import "../components/CircleProgress/circle-progress.scss";
+@import "../components/StockQuotes/stock-quotes.scss";
 
 @mixin font($font-family, $font-file) {
   @font-face {
@@ -139,12 +140,15 @@ a {
 
 .centered-slide {
   position: absolute;
+  max-width: 1600px;
   width: 100%;
+  margin-left: 6.2rem;
+  z-index: 1;
   height: 100%;
-  z-index: -1;
-  background-color: rgba(#000, 0.5);
-  border-bottom-left-radius: 15rem;
-  border-bottom-right-radius: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .text {
@@ -158,27 +162,29 @@ a {
   flex-direction: column;
   justify-content: center;
   // background-color: rgba(#000, 0.5);
-
-  .title {
-    font-size: 6.5rem;
-    font-family: "Lora-Regular";
-    color: #fff;
-  }
-  .line {
-    display: flex;
-    width: 4rem;
-    height: 0.3rem;
-    background-color: $color-gray;
-    margin-top: 1rem;
-    margin-bottom: 3rem;
-  }
-  .description {
-    font-size: 1.8rem;
-    line-height: 4rem;
-    color: #fff;
-    max-width: 78.5rem;
-  }
 }
+
+.title {
+  font-size: 6.5rem;
+  font-family: "Lora-Regular";
+  color: #fff;
+}
+.line {
+  display: flex;
+  width: 4rem;
+  height: 0.3rem;
+  background-color: $color-gray;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+.description {
+  font-size: 1.8rem;
+  line-height: 4rem;
+  color: #fff;
+  max-width: 78.5rem;
+  white-space: normal;
+}
+
 .video-filter {
   position: absolute;
   width: 100%;

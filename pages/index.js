@@ -6,6 +6,8 @@ import CountdownTimer from "../components/CountdownTimer/CountdownTimer";
 import { Slider } from "../components/Slider/Slider";
 import SectionCourses from "../components/SectionCourses/SectionCourses";
 import CircleProgress from "../components/CircleProgress/CircleProgress";
+import Circle from "../components/CircleProgress/Circle";
+import StockQuotes from "../components/StockQuotes/StockQuotes";
 
 export default function Home() {
   const THREE_DAYS_IN_MS = 3 * 24 * 60 * 60 * 1000;
@@ -30,9 +32,9 @@ export default function Home() {
             <CountdownTimer targetDate={dateTimeAfterThreeDays} />
           </h3>
         </div>
-        {/* Video Slider */}
+        {/* Video Slider Hero */}
         <div className="hero-area">
-          <Slider />
+          <Slider autoplayInterval={6000} />
         </div>
         {/* Hard coded Section Hero */}
         {/* <section className="hero-video-area">
@@ -63,8 +65,9 @@ export default function Home() {
             </video>
           </div>
         </section> */}
+        {/* Quotes Stocks */}
+        <StockQuotes />
         <SectionCourses />
-        <CircleProgress />
       </main>
     </div>
   );

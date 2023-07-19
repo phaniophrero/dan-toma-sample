@@ -1,0 +1,20 @@
+{
+  "navbarDataLeft": [
+    {
+      "id": 1,
+      "tab": "Home"
+    },
+    {
+      "id": 2,
+      "tab": "Courses"
+    },
+    {
+      "id": 3,
+      "tab": "Discord & Telegram"
+    },
+    {
+      "id": 4,
+      "tab": "Mentoring"
+    }
+  ]
+}

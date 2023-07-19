@@ -1,41 +1,46 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { SliderItem } from "./SliderItem";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import ProgressBar from "./ProgressBar";
+import { slides } from "../../data/sliderData.json";
+import Circle from "../CircleProgress/Circle";
 
-export const Slider = () => {
+export const Slider = ({ autoplayInterval }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const items = [
-    {
-      id: 1,
-      video: "/video/video.mp4",
-      title: "Welcome",
-      //   path: "",
-      className: "centered-slide",
-      description:
-        "Imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n’a pas fait que survivre cinq siècles, mais s’est aussi adapt à la bureautique informatique, sans que son contenu n’en soit modifié.",
-    },
-    {
-      id: 2,
-      video: "/video/video-2.mp4",
-      title: "Dan Toma",
-      path: "/dan-toma",
-      btnTitle: "See More",
-      //   className: "",
-      description:
-        "Imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n’a pas fait que survivre cinq siècles, mais",
-    },
-  ];
+  //   const nextSlide = () => {
+  //     setActiveIndex(activeIndex === slides.length - 1 ? 0 : activeIndex + 1);
+  //   };
 
-  const updateIndex = (newIndex) => {
-    if (newIndex < 0) {
-      newIndex = 0;
-    } else if (newIndex >= items.length) {
-      newIndex = items.length - 1;
+  const nextSlide = useCallback(() => {
+    setActiveIndex((prevIndex) => (prevIndex + 1) % slides.length);
+  }, [slides.length]);
+
+  const prevSlide = useCallback(() => {
+    setActiveIndex(
+      (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
+    );
+  }, [slides.length]);
+
+  //   const prevSlide = () => {
+  //     setActiveIndex(activeIndex === 0 ? slides.length - 1 : activeIndex - 1);
+  //   };
+
+  useEffect(() => {
+    if (autoplayInterval) {
+      const autoplay = setInterval(nextSlide, autoplayInterval);
+      return () => clearInterval(autoplay);
     }
-    setActiveIndex(newIndex);
-  };
+  }, [autoplayInterval, nextSlide]);
+
+  //   const updateIndex = (newIndex) => {
+  //     if (newIndex < 0) {
+  //       newIndex = 0;
+  //     } else if (newIndex >= slides.length) {
+  //       newIndex = slides.length - 1;
+  //     }
+  //     setActiveIndex(newIndex);
+  //   };
 
   return (
     <div className="slider">
@@ -43,34 +48,41 @@ export const Slider = () => {
         className="inner"
         style={{ transform: `translate(-${activeIndex * 100}%)` }}
       >
-        {items.map((item, index) => {
+        {slides.map((item, index) => {
           return <SliderItem item={item} key={item.id} width={"100%"} />;
         })}
       </div>
       <div className="slider-buttons">
         <button
-          onClick={() => updateIndex(activeIndex - 1)}
+          //   onClick={() => updateIndex(activeIndex - 1)}
+          onClick={prevSlide}
           className="button-arrow"
         >
           <span className="btn-arrow-icon btn-arrow-icon-left">
             <BsArrowLeft />
           </span>{" "}
-          prev
         </button>
-
-        {/* <div className="indicators">
-            {items.map((item, index) => (
-              <ProgressBar item={item} index={index} />
-            ))}
-          </div> */}
+        {/* 
+        <div className="indicators">
+          <Circle
+            slides={slides}
+            nextSlide={nextSlide}
+            autoplayInterval={autoplayInterval}
+            activeIndex={activeIndex}
+            setActiveIndex={setActiveIndex}
+          /> */}
+        {/* {slides.map((item, index) => (
+          ))} */}
+        {/* </div> */}
 
         <div className="indicators">
-          {items.map((item, index) => {
+          {slides.map((item, index) => {
             return (
               <button
-                onClick={() => {
-                  updateIndex(index);
-                }}
+                // onClick={() => {
+                //   updateIndex(index);
+                // }}
+                onClick={() => setActiveIndex(index)}
                 key={index}
                 className="indicator-buttons-dot"
               >
@@ -82,10 +94,10 @@ export const Slider = () => {
           })}
         </div>
         <button
-          onClick={() => updateIndex(activeIndex + 1)}
+          //   onClick={() => updateIndex(activeIndex + 1)}
+          onClick={nextSlide}
           className="button-arrow"
         >
-          next{" "}
           <span className="btn-arrow-icon btn-arrow-icon-right">
             <BsArrowRight />
           </span>

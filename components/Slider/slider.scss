@@ -84,7 +84,7 @@
   color: $color-light-blue;
   width: 90%;
   position: absolute;
-  bottom: 20px;
+  bottom: 40px;
   left: 50%;
   transform: translate(-50%, 0);
 }
@@ -160,6 +160,7 @@
   margin-top: 20px;
   color: $color-light-blue;
   position: relative;
+  gap: 3rem;
 }
 
 // SVG Circle
@@ -192,7 +193,7 @@
 }
 
 .indicators > button {
-  margin: 5px;
+  //   margin: 5px;
   background: none;
 }
 
@@ -203,17 +204,28 @@
   border-radius: 100%;
   z-index: 100;
   position: absolute;
+  transition: 0.1s ease-in-out;
 }
 
 .dot-active {
-  background-color: transparent;
-  position: relative;
-}
-.dot-active::before {
-  content: "";
-  position: absolute;
-  width: 12px;
+  //   background-color: transparent;
+  //   position: relative;
+  //   width: 18px;
+  //   transition: 0.1s ease-in-out;
+  width: 3rem;
+  //   width: 12px;
   height: 12px;
-  border-radius: 100%;
+  border-radius: 0.5rem;
   background-color: $color-blue;
+  transition: 0.1s ease-in-out;
 }
+// .dot-active::before {
+//   content: "";
+//   position: absolute;
+//   width: 28px;
+//   //   width: 12px;
+//   height: 12px;
+//   border-radius: 0.5rem;
+//   background-color: $color-blue;
+//   transition: 0.1s ease-in-out;
+// }

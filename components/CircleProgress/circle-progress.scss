@@ -1,46 +1,54 @@
-.circle-svg {
-  width: 500px;
-  height: 500px;
+// VALUE /////////////////
 
-  svg circle {
-    fill: none;
-    stroke-width: 5px;
-    stroke-linecap: round;
-  }
+$bg: #dde6f0;
 
-  svg circle.bg {
-    stroke: #4e4e4e;
-  }
+// loading color -------------
+$lc: #f50;
 
-  svg circle.meter {
-    stroke: #ff7a59;
-    stroke-dashoffset: 300px;
-    stroke-dasharray: 300px;
-    animation: prog 10s linear forwards;
-    // animation: prog 10s linear forwards, glow 1s 9s ease-in-out forwards;
-  }
+$fix: 100%;
 
-  @keyframes prog {
-    0% {
-      stroke-dashoffset: 300px;
-    }
-    20% {
-      stroke-dashoffset: 200px;
-    }
-    30% {
-      stroke-dashoffset: 190px;
-    }
-    80% {
-      stroke-dashoffset: 100px;
-    }
-    100% {
-      stroke-dashoffset: 0;
-    }
-  }
+// shadow ---------------------
+$bs: 0 1px 0 rgba(0, 0, 0, 0.2);
 
-  //   @keyframes glow {
-  //     100% {
-  //       filter: drop-shadow(0 0 3px #ff7a59);
-  //     }
-  //   }
+// circle diameter ------------
+$w: 100px;
+
+// highlight thickness --------
+$low: 10px;
+
+// timer -----------------------
+$tm: 8s;
+
+//  mixin- --------------------
+// =keyframes($name)
+//   @-webkit-keyframes #{$name}
+//     @content
+
+#loading {
+  width: $w;
+  height: $w;
+  margin: 30px auto;
+  position: relative;
+}
+
+.outer-shadow {
+  z-index: 6;
+  position: absolute;
+  width: $fix;
+  height: $fix;
+  border-radius: $fix;
+  box-shadow: inset $bs;
+}
+
+.inner-shadow {
+  @extend .outer-shadow;
+  top: 50%;
+  left: 50%;
+  width: $w - ($low * 2);
+  height: $w - ($low * 2);
+  margin-left: -($w - ($low * 2))/2;
+  margin-top: -($w - ($low * 2))/2;
+  border-radius: $fix;
+  background-color: $bg;
+  box-shadow: $bs;
 }
