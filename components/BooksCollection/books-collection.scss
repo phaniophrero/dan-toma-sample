@@ -1,0 +1,112 @@
+.section-books-collection {
+  display: flex;
+  //   justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  min-height: 45rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 8px rgba(#002cbf, 0.3);
+  margin: 0 auto 10rem auto;
+  position: relative;
+  padding: 0 5rem;
+}
+
+.section-books-collection-cols-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.section-books-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.6rem;
+  font-family: "Montserrat-Bold";
+  color: $color-light-blue;
+  background-color: #003bff;
+  padding: 1rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.section-books-link-wrapper {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  display: flex;
+  align-items: center;
+}
+.section-books-link {
+  font-size: 2rem;
+  font-family: "Montserrat-Regular";
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &:hover svg {
+    transform: translateX(10px);
+  }
+}
+.section-books-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    font-size: 2rem;
+    width: 25px;
+    transition: transform 0.3s;
+  }
+}
+
+.section-books-collection-title-wrapper {
+}
+.section-books-collection-title,
+.color-letter-blue {
+  font-size: 4rem;
+  font-family: "Lora-Regular";
+}
+.color-letter-blue {
+  color: #003bff;
+}
+.blue-line {
+  display: flex;
+  width: 4rem;
+  height: 0.3rem;
+  background-color: #003bff;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.section-books-collection-description {
+  font-size: 1.8rem;
+  line-height: 3rem;
+  font-family: "Montserrat-Medium";
+  min-width: 51.7rem;
+  max-width: 51.7rem;
+  //   white-space: normal;
+}
+
+.section-books-collection-description2 {
+  display: flex;
+  gap: 1rem;
+  margin-top: 6rem;
+  border: 2px solid #003bff;
+  border-radius: 0.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 2rem;
+}
+
+.description2-card {
+  display: flex;
+}
+.description2-card-number {
+  font-size: 4.5rem;
+  font-family: "Montserrat-Regular";
+  line-height: 5.5rem;
+  color: #003bff;
+}
+.description2-text {
+  //   white-space: normal;
+  min-width: 29rem;
+  width: 29rem;
+}

@@ -1,0 +1,37 @@
+.section-social-media {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 20rem auto 10rem auto;
+  gap: 6rem;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  color: #5a6374;
+  gap: 1rem;
+  &:hover {
+    color: $color-blue;
+  }
+}
+.social-media-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg,
+  img {
+    font-size: 2rem;
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+}
+
+.social-media-text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  &:hover svg {
+    stroke: $color-blue;
+  }
+}

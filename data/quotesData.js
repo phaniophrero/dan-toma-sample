@@ -1,9 +1,10 @@
 import { FaArrowDown, FaArrowUp } from "react-icons/fa6";
+import { BiCode } from "react-icons/bi";
 
 const quotesData = [
   {
     id: 1,
-    icon: "",
+    icon: <BiCode />,
     quoteTab: "COMPARE MARKETS",
     quotes: [
       //   {

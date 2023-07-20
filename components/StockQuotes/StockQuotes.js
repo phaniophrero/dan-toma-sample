@@ -48,6 +48,9 @@ const StockQuotes = () => {
                   tabActive === index ? "active" : ""
                 } nav-quotes-item`}
               >
+                {tab.icon && (
+                  <span className="nav-quotes-item-icon">{tab.icon}</span>
+                )}
                 {tab.quoteTab}
               </li>
               {/* {tabActive === index && (

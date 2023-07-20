@@ -9,6 +9,9 @@ import CircleProgress from "../components/CircleProgress/CircleProgress";
 import Circle from "../components/CircleProgress/Circle";
 import StockQuotes from "../components/StockQuotes/StockQuotes";
 import BooksCollection from "../components/BooksCollection/BooksCollection";
+import Newsletter from "../components/Newsletter/Newsletter";
+import SocialMedia from "../components/SocialMedia/SocialMedia";
+import Footer from "../components/Footer/Footer";
 
 export default function Home() {
   const THREE_DAYS_IN_MS = 3 * 24 * 60 * 60 * 1000;
@@ -70,7 +73,10 @@ export default function Home() {
         <StockQuotes />
         <SectionCourses />
         <BooksCollection />
+        <Newsletter />
+        <SocialMedia />
       </main>
+      <Footer />
     </div>
   );
 }

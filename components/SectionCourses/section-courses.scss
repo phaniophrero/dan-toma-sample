@@ -119,14 +119,18 @@ h1 {
   //   height: 7rem;
 }
 .secondary-cta {
-  font-size: 1.8rem;
+  font-size: 2rem;
   text-decoration: none;
   color: black;
   display: block;
   padding: 1em 0;
+  span {
+    font-size: 2rem;
+    font-family: "Montserrat-Regular";
+  }
 }
 .secondary-cta svg {
-  width: 20px;
+  width: 25px;
   transition: transform 0.3s;
 }
 
