@@ -12,6 +12,9 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto 10rem auto;
+  @media screen and (max-width: 1200px) {
+    flex-flow: wrap;
+  }
 }
 .footer-col {
   display: flex;
@@ -63,6 +66,7 @@
 }
 .footer-row2-link {
   font-size: 1.2rem;
+  color: $color-light-blue;
 }
 .footer-row2-link-dot {
   width: 0.3rem;
@@ -81,4 +85,5 @@
 
 .footer-row3-year {
   font-size: 1.2rem;
+  color: $color-light-blue;
 }

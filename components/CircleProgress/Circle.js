@@ -20,8 +20,6 @@ const Circle = ({
     setTrigger(!trigger);
   };
 
-  //? TODO   Trebuie sa vad cum fac sa declansez sa porneasca automat animatia cercului loading-ul.
-
   //   useEffect(() => {
   //     setTimeout(() => {
   //       percentage < 99 ? setPercentage(percentage + 1) : setPercentage(0);
@@ -39,9 +37,9 @@ const Circle = ({
       percentage < 99 ? setPercentage(percentage + 1) : setPercentage(0);
 
       if (percentage === 99) {
-        activeIndex < slides.length - 1
-          ? setActiveIndex(activeIndex + 1)
-          : setActiveIndex(0);
+        // activeIndex < slides.length - 1
+        //   ? setActiveIndex(activeIndex + 1)
+        // setActiveIndex(0);
       }
     }, autoplayInterval / 100);
   }
@@ -58,34 +56,32 @@ const Circle = ({
 
   return (
     <>
-      {slides?.map((bar, i) => {
-        return (
-          <svg
-            key={i}
-            width={sqSize}
-            height={sqSize}
-            viewBox={viewBox}
-            fill="transparent"
-            stroke="#0062ff"
-            onClick={() => {
-              setActiveIndex(i), barTriggerHandler();
+      {/* {slides?.map((bar, i) => { */}
+      {/* return ( */}
+      <svg
+        // key={i}
+        width={sqSize}
+        height={sqSize}
+        viewBox={viewBox}
+        fill="transparent"
+        stroke="#0062ff"
+        onClick={() => barTriggerHandler()}
+      >
+        {/* {i === activeIndex ? ( */}
+        <>
+          <circle
+            className="circle-progress"
+            cx={sqSize / 2}
+            cy={sqSize / 2}
+            r={radius}
+            strokeWidth={`${strokeWidth}px`}
+            transform={`rotate(-90 ${sqSize / 2} ${sqSize / 2})`}
+            style={{
+              strokeDasharray: dashArray,
+              strokeDashoffset: dashOffset,
             }}
-          >
-            {i === activeIndex ? (
-              <>
-                <circle
-                  className="circle-progress"
-                  cx={sqSize / 2}
-                  cy={sqSize / 2}
-                  r={radius}
-                  strokeWidth={`${strokeWidth}px`}
-                  transform={`rotate(-90 ${sqSize / 2} ${sqSize / 2})`}
-                  style={{
-                    strokeDasharray: dashArray,
-                    strokeDashoffset: dashOffset,
-                  }}
-                ></circle>
-                {/* <circle
+          ></circle>
+          {/* <circle
                   className="circle-progress2"
                   cx={sqSize / 2}
                   cy={sqSize / 2}
@@ -94,18 +90,18 @@ const Circle = ({
                   //   fill="transparent"
                   //   stroke="#fff"
                 ></circle> */}
-              </>
-            ) : null}
-            <circle
-              className="cicle-center"
-              cx="50%"
-              cy="50%"
-              r="3"
-              fill="#0062ff"
-            />
-          </svg>
-        );
-      })}
+        </>
+        {/* ) : null} */}
+        <circle
+          className="cicle-center"
+          cx="50%"
+          cy="50%"
+          r="3"
+          fill="#0062ff"
+        />
+      </svg>
+      {/* ); */}
+      {/* })} */}
     </>
   );
 };

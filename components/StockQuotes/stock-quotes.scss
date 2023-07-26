@@ -13,6 +13,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 1200px) {
+    flex-flow: wrap;
+  }
 }
 
 .nav-quotes-list {
@@ -20,7 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 // compare chart
@@ -43,6 +46,7 @@
   cursor: pointer;
   font-size: 1.4rem;
   font-family: "Montserrat-Medium";
+  padding: 0.5rem 1rem;
   gap: 1rem;
 }
 .nav-quotes-item.active {
@@ -71,6 +75,9 @@
   justify-content: center;
   width: 100%;
   margin-top: 3rem;
+  @media screen and (max-width: 1200px) {
+    flex-flow: wrap;
+  }
 }
 
 .quotes {
@@ -81,12 +88,19 @@
   width: 100%;
   max-width: 1600px;
   transition: 0.3s;
+  @media screen and (max-width: 1200px) {
+    margin: 0 auto;
+  }
 }
 
 .quote {
   width: 100%;
   max-width: 1169px;
   gap: 2rem;
+  @media screen and (max-width: 1200px) {
+    justify-content: center;
+    flex-flow: wrap;
+  }
 }
 
 .quote-card {
@@ -100,6 +114,9 @@
   gap: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 1px 8px rgba(#002cbf, 0.3);
+  @media screen and (max-width: 1200px) {
+    max-width: 25vw;
+  }
 }
 
 .arrow-icon {

@@ -5,6 +5,18 @@
   max-width: 1200px;
   min-height: 45rem;
   border-radius: 0.5rem;
+  // box-shadow: 0 1px 8px rgba(#002cbf, 0.3);
+  margin: 0 auto 10rem auto;
+  position: relative;
+  padding: 0 5rem;
+}
+.section-books-collection-wrapper {
+  display: flex;
+  //   justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  min-height: 45rem;
+  border-radius: 0.5rem;
   box-shadow: 0 1px 8px rgba(#002cbf, 0.3);
   margin: 0 auto 10rem auto;
   position: relative;
@@ -35,6 +47,9 @@
   right: 50px;
   display: flex;
   align-items: center;
+  @media screen and (max-width: 1200px) {
+    bottom: 30px;
+  }
 }
 .section-books-link {
   font-size: 2rem;

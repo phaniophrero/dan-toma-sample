@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { FaShoppingCart } from "react-icons/fa";
 import {
   navbarMegeMenuDataLeft,
@@ -7,35 +8,65 @@ import {
 } from "../../data/navbarMegaMenuData";
 
 const NavbarMegaMenu = () => {
+  const [colorChangeBg, setColorChangeBg] = useState(false);
   const [activeStrategies, setActiveStrategies] = useState(false);
   const [activeResources, setActiveResources] = useState(false);
 
+  const router = useRouter();
+  console.log(router.pathname);
+
+  const changeNavbarBgColor = () => {
+    if (window.scrollY >= 90) {
+      setColorChangeBg(true);
+    } else {
+      setColorChangeBg(false);
+    }
+  };
+
+  if (typeof window !== "undefined") {
+    window.addEventListener("scroll", changeNavbarBgColor);
+  }
+
   return (
-    <header className="mega-menu-container">
+    <header
+      className={`mega-menu-container ${colorChangeBg ? "activeBg" : ""}`}
+    >
       <nav className="mega-menu">
         <ul className="mega-menu-list mega-menu-list-left">
           {navbarMegeMenuDataLeft.map((navItemLeft) => (
             <li key={navItemLeft.id} className="mega-menu-item-tab">
-              <a href="#" className="mega-menu-item-link">
+              <a
+                href={navItemLeft.path}
+                className={`mega-menu-item-link ${
+                  navItemLeft.path === router.pathname ? "active" : ""
+                }`}
+              >
                 {navItemLeft.tab}
               </a>
+              {/* {navItemLeft.submenu && (
+                <div className="">
+                  <div>
+                    <div>
+                      {navItemLeft.submenuLinks.map((sublinks) => (
+                        <ul>
+                          <h3>
+                            {sublinks.submenuTab
+                              ? sublinks.submenuTab
+                              : sublinks.submenuTab2}
+                          </h3>
+                          {sublinks.submenuTabLinks.map((sublink) => (
+                            <li>
+                              <a href={sublink.link}>{sublink.item}</a>
+                            </li>
+                          ))}
+                        </ul>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )} */}
             </li>
           ))}
-        </ul>
-
-        <div className="logo-wrapper">
-          {/* <img className="logo" src="./images/logo-dan-toma.png" alt="logo" /> */}
-          <Image
-            className="logo"
-            width={40}
-            height={40}
-            src="/images/logo-dan-toma.png"
-            alt="logo"
-          />
-          <span className="logo-small-text">DAN TOMA</span>
-        </div>
-
-        <ul className="mega-menu-list mega-menu-list-right">
           {/* {navbarMegeMenuDataRight.map((navItemRight) => (
             <li key={navItemRight.id} className="mega-menu-item-tab">
               <a href="#" className="mega-menu-item-link">
@@ -53,7 +84,7 @@ const NavbarMegaMenu = () => {
             onMouseEnter={() => setActiveStrategies(true)}
           >
             <a href="#" className="mega-menu-item-link">
-              Trading Strategies
+              Knowledge
             </a>
           </li>
           <li
@@ -64,26 +95,7 @@ const NavbarMegaMenu = () => {
               Resources
             </a>
           </li>
-          <li className="mega-menu-item-tab">
-            <a href="#" className="mega-menu-item-link">
-              About
-            </a>
-          </li>
-          <li className="mega-menu-item-tab">
-            <a href="#" className="mega-menu-item-link">
-              <FaShoppingCart />
-            </a>
-          </li>
-          <li className="mega-menu-item-tab">
-            <a href="#" className="mega-menu-item-link">
-              Sign in
-            </a>
-          </li>
-          <li className="mega-menu-item-tab">
-            <a href="#" className="mega-menu-item-link">
-              Sign up
-            </a>
-          </li>
+
           {activeStrategies && (
             <div
               onMouseLeave={() => setActiveStrategies(false)}
@@ -403,6 +415,27 @@ const NavbarMegaMenu = () => {
               </ul>
             </div>
           )}
+        </ul>
+
+        {/* <div className="logo-wrapper">
+          <Image
+            className="logo"
+            width={40}
+            height={40}
+            src="/images/logo-dan-toma.png"
+            alt="logo"
+          />
+          <span className="logo-small-text">DAN TOMA</span>
+        </div> */}
+
+        <ul className="mega-menu-list mega-menu-list-right">
+          {navbarMegeMenuDataRight.map((itemRight) => (
+            <li className="mega-menu-item-tab" key={itemRight.id}>
+              <a href={itemRight.path} className="mega-menu-item-link">
+                {itemRight.tab ? itemRight.tab : itemRight.iconCart}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>

@@ -3,38 +3,61 @@
   width: 100%;
   height: 90px;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
+  align-items: flex-end;
   margin: 0 auto;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(#000, 1);
+  background-color: transparent;
   z-index: 100;
   // bg trasparent disipit
   // background-image: linear-gradient(180deg, #181818 60%, rgba(24, 24, 24, 0));
+  // transform: translateX(100%);
+  // transition-property: transform;
+  // transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  // transition-duration: 150ms;
+  @media screen and (max-width: 960px) {
+    transition: 0.8s all ease;
+  }
 }
+.mega-menu-container.activeBg {
+  background-color: rgba(#000, 1);
+}
+
 .mega-menu {
   display: grid;
   max-width: 1600px;
   width: 100%;
-  grid-template-columns: 430px 1fr 560px;
+  grid-template-columns: 1fr 1fr;
+
+  @media screen and (max-width: 1640px) {
+    padding: 0 2rem;
+  }
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 .mega-menu-list {
   display: flex;
   justify-content: center;
   width: 100%;
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
 }
 
 .mega-menu-list-left {
-  flex: 1;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-end;
+  gap: 3rem;
 }
 .mega-menu-list-right {
-  flex: 1;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: flex-end;
   position: relative;
+  gap: 3rem;
 }
 .mega-menu-item-tab {
   display: flex;
@@ -47,21 +70,44 @@
 .mega-menu-item-link {
   font-size: 1.4rem;
   font-family: "Montserrat-Regular";
-  color: $color-gray;
+  color: $color-light-blue;
   margin-bottom: 1rem;
   position: relative;
 
-  &:hover {
-    color: $color-light-blue;
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -1.3rem;
-      left: 0;
-      width: 100%;
-      height: 0.25rem;
-      background-color: $color-blue;
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1.3rem;
+    left: 0;
+    width: 0%;
+    height: 0.25rem;
+    background-color: $color-blue;
+    transition: 0.3s;
+  }
+  &:hover::after {
+    right: 0;
+    width: 100%;
+    transition: 0.3s;
+  }
+}
+.mega-menu-item-link.active {
+  color: $color-blue;
+  transition: 0.3s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1.3rem;
+    left: 0;
+    width: 20%;
+    height: 0.25rem;
+    background-color: $color-blue;
+    transition: 0.3s;
+  }
+  &:hover::after {
+    right: 0;
+    width: 100%;
+    transition: 0.3s;
   }
 }
 
@@ -93,8 +139,9 @@
   display: flex;
   position: absolute;
   top: 130px;
-  right: 75%;
-  background-color: rgba(#000, 0.15);
+  // right: 0%;
+  left: 0%;
+  background-color: rgba(#000, 0.7);
   width: 918px;
   padding: 2rem 3rem;
   border-radius: 0.5rem;
@@ -117,7 +164,7 @@
 }
 
 .mega-menu-submenu-item-title {
-  color: $color-gray-dark;
+  color: $color-gray;
   margin-bottom: 2rem;
 }
 .mega-menu-submenu-item-title-crypto {

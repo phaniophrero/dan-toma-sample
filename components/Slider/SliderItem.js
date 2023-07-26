@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
+import { forwardRef } from "react";
 
-export const SliderItem = ({ item, index, width }) => {
+export const SliderItem = forwardRef(({ item, index, width }, ref) => {
   return (
-    <div className="slider-item" key={index} style={{ width: width }}>
+    <div className="slider-item" key={index} style={{ width: width }} ref={ref}>
       <section className="hero-video-area">
         <div className="text-bg">
           <span className={item.className ? "" : "bg-patrat"}></span>
@@ -44,4 +45,4 @@ export const SliderItem = ({ item, index, width }) => {
       </section>
     </div>
   );
-};
+});
