@@ -4,18 +4,24 @@
   justify-content: center;
   margin: 0 auto;
   max-width: 1600px;
-  border-top: 1px solid #c4d1ea;
+  // border-top: 1px solid #c4d1ea;
   padding-top: 6rem;
 }
-.footer-row1 {
-  width: 100%;
+
+.footer-social-media-list {
   display: flex;
-  justify-content: space-between;
-  margin: 0 auto 10rem auto;
-  @media screen and (max-width: 1200px) {
-    flex-flow: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+.footer-social-media-item {
+  color: $color-light-blue;
+  &:hover {
+    color: $color-blue;
   }
 }
+.footer-social-media-link {
+}
+
 .footer-col {
   display: flex;
   flex-direction: column;
@@ -55,7 +61,7 @@
 .footer-row2 {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
 }
@@ -67,6 +73,11 @@
 .footer-row2-link {
   font-size: 1.2rem;
   color: $color-light-blue;
+  transition: color 0.2s;
+  &:hover {
+    color: $color-blue;
+    transition: color 0.2s;
+  }
 }
 .footer-row2-link-dot {
   width: 0.3rem;
@@ -86,4 +97,14 @@
 .footer-row3-year {
   font-size: 1.2rem;
   color: $color-light-blue;
+}
+
+.footer-horizonta-line {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  height: 0.1rem;
+  background-color: #50525a;
+  border: none;
+  margin-bottom: 2rem;
 }
