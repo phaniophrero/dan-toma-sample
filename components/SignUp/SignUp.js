@@ -247,8 +247,8 @@ const SignUp = () => {
         <div className="sign-in-form-right-text-bottom">
           <span className="sign-in-form-quotes">“</span>
           <h3 className="sign-in-form-right-title-text">
-            te pour réaliser un livre spécimen de polices de texte. Il n'a pas
-            fait que
+            te pour réaliser un livre spécimen de polices de texte. Il n&apos;a
+            pas fait que
           </h3>
           <div className="sign-in-form-buttons-prev-next">
             <a href="/sign-in" className="sign-in-form-buttons-prev-link">

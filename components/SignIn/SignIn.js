@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 
 const SignIn = () => {
@@ -27,8 +28,8 @@ const SignIn = () => {
           <header className="sign-in-form-header">
             <h1 className="sign-in-form-header-title">Sign in</h1>
             <p className="sign-in-form-header-description">
-              Start learning livre spécimen de polices de texte. Il n'a pas fait
-              que survivre.
+              Start learning livre spécimen de polices de texte. Il n&apos;a pas
+              fait que survivre.
             </p>
           </header>
         </div>
@@ -74,7 +75,7 @@ const SignIn = () => {
           </div>
           <div className="sign-in-form-bottom">
             <h3 className="sing-in-form-bottom-text">
-              Don't have an account ?
+              Don&apos;t have an account ?
             </h3>
             <a className="sign-in-form-link" href="/sign-up">
               Sign up
@@ -98,16 +99,16 @@ const SignIn = () => {
         <div className="sign-in-form-right-text-bottom">
           <span className="sign-in-form-quotes">“</span>
           <h3 className="sign-in-form-right-title-text">
-            te pour réaliser un livre spécimen de polices de texte. Il n'a pas
-            fait que
+            te pour réaliser un livre spécimen de polices de texte. Il n&apos;a
+            pas fait que
           </h3>
           <div className="sign-in-form-buttons-prev-next">
-            <a href="/sign-in" className="sign-in-form-buttons-prev-link">
+            <Link href="/sign-in" className="sign-in-form-buttons-prev-link">
               <IoIosArrowDropleft />
-            </a>
-            <a href="/sign-up" className="sign-in-form-buttons-next-link">
+            </Link>
+            <Link href="/sign-up" className="sign-in-form-buttons-next-link">
               <IoIosArrowDropright />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
