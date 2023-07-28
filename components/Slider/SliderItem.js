@@ -46,5 +46,6 @@ const SliderItem = forwardRef(({ item, index, width }, ref) => {
     </div>
   );
 });
+SliderItem.displayName = "SliderItem";
 
 export default SliderItem;
