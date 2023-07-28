@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BsCheckLg } from "react-icons/bs";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
+import FormSteps from "../FormSteps/FormSteps";
 
 const formSteps = [
   {
@@ -14,7 +15,31 @@ const formSteps = [
 ];
 
 const SignUp = () => {
-  const [step, setStep] = useState();
+  const [step, setStep] = useState(1);
+  const [activeStep, setActiveStep] = useState(1);
+  const [widthStep, setWidthStep] = useState();
+
+  const handleStepNext = () => {
+    // if (activeStep >= 1) {
+    //   setActiveStep(activeStep);
+    // } else {
+    // }
+    if (activeStep > formSteps.length - 1) {
+      setActiveStep(1);
+    } else {
+      setActiveStep(activeStep + 1);
+    }
+  };
+  const handleStepPrev = () => {
+    if (activeStep < formSteps.length - 1) {
+      setActiveStep(1);
+    } else {
+      setActiveStep(activeStep - 1);
+    }
+  };
+
+  console.log("activeStep", activeStep);
+  console.log("step", formSteps.length);
 
   return (
     <div className="sign-up-container">
@@ -25,15 +50,33 @@ const SignUp = () => {
         </header>
         <div className="sign-up-form-steps-container">
           <div className="sign-up-form-steps-wrapper">
-            <div className="sign-up-form-step">
+            <div
+              className="sign-up-form-steps-progress"
+              style={{
+                width: `${activeStep > 1 ? "8.8rem" : "4.4rem"}`,
+                transform: `translate(${
+                  activeStep > 1 ? "0%, -50%" : "-50%, -50%"
+                })`,
+                transition: "transform 0.3s ease-out",
+              }}
+            ></div>
+            {formSteps.map((item, index) => (
+              <FormSteps
+                activeStep={activeStep}
+                item={item}
+                index={index}
+                key={item.step}
+              />
+            ))}
+            {/* <div className="sign-up-form-step">
               <h3 className="sign-up-form-step-number active">1</h3>
-            </div>
-            <span className="sign-up-form-step-line">
+            </div> */}
+            {/* <span className="sign-up-form-step-line">
               <span className="sign-up-form-step-line-inner"></span>
-            </span>
-            <div className="sign-up-form-step">
+            </span> */}
+            {/* <div className="sign-up-form-step">
               <h3 className="sign-up-form-step-number">2</h3>
-            </div>
+            </div> */}
           </div>
           <div className="sign-up-form-step-title-wrapper">
             <h4 className="sign-up-form-step-title active">User details</h4>
@@ -42,65 +85,124 @@ const SignUp = () => {
           </div>
         </div>
         <form className="sign-up-form" action="">
-          <div className="sign-up-form-row">
-            <input
-              className="sign-up-form-input"
-              type="text"
-              placeholder="First Name *"
-            />
-          </div>
-          <div className="sign-up-form-row">
-            <input
-              className="sign-up-form-input"
-              type="text"
-              placeholder="Last Name *"
-            />
-          </div>
-          <div className="sign-up-form-row">
-            <input
-              className="sign-up-form-input"
-              type="text"
-              placeholder="Address 1 *"
-            />
-          </div>
-          <div className="sign-up-form-row">
-            <input
-              className="sign-up-form-input"
-              type="text"
-              placeholder="Address 2"
-            />
-          </div>
-          <div className="sign-up-form-row">
-            <input
-              className="sign-up-form-input"
-              type="text"
-              placeholder="Country *"
-            />
-          </div>
-          <div className="sign-up-form-row">
-            <input
-              className="sign-up-form-input"
-              type="text"
-              placeholder="City *"
-            />
-          </div>
-          <div className="sign-up-form-row">
-            <input
-              className="sign-up-form-input"
-              type="text"
-              placeholder="Zip Code"
-            />
-          </div>
-          <div className="sign-up-form-row">
-            <input
-              className="sign-up-form-input"
-              type="text"
-              placeholder="Phone number *"
-            />
-          </div>
+          {activeStep === formSteps.length - 1 ? (
+            <div className="sign-up-form-step-1">
+              <div className="sign-up-form-row">
+                <input
+                  className="sign-up-form-input"
+                  type="text"
+                  placeholder="First Name *"
+                />
+              </div>
+              <div className="sign-up-form-row">
+                <input
+                  className="sign-up-form-input"
+                  type="text"
+                  placeholder="Last Name *"
+                />
+              </div>
+              <div className="sign-up-form-row">
+                <input
+                  className="sign-up-form-input"
+                  type="text"
+                  placeholder="Address 1 *"
+                />
+              </div>
+              <div className="sign-up-form-row">
+                <input
+                  className="sign-up-form-input"
+                  type="text"
+                  placeholder="Address 2"
+                />
+              </div>
+              <div className="sign-up-form-row">
+                <input
+                  className="sign-up-form-input"
+                  type="text"
+                  placeholder="Country *"
+                />
+              </div>
+              <div className="sign-up-form-row">
+                <input
+                  className="sign-up-form-input"
+                  type="text"
+                  placeholder="City *"
+                />
+              </div>
+              <div className="sign-up-form-row">
+                <input
+                  className="sign-up-form-input"
+                  type="text"
+                  placeholder="Zip Code"
+                />
+              </div>
+              <div className="sign-up-form-row">
+                <input
+                  className="sign-up-form-input"
+                  type="text"
+                  placeholder="Phone number *"
+                />
+              </div>
+            </div>
+          ) : (
+            <div className="sign-up-form-step-2">
+              <div className="sign-up-form-row">
+                <input
+                  className="sign-up-form-input"
+                  type="text"
+                  placeholder="Email *"
+                />
+              </div>
+              <div className="sign-up-form-row">
+                <input
+                  className="sign-up-form-input"
+                  type="password"
+                  placeholder="Password *"
+                />
+              </div>
+              <div className="sign-up-form-row">
+                <input
+                  className="sign-up-form-input"
+                  type="password"
+                  placeholder="Confirm Password *"
+                />
+              </div>
+              <div className="sign-up-form-submit-button-wrapper">
+                <button className="sign-up-form-submit-button">
+                  Create Account
+                </button>
+              </div>
+            </div>
+          )}
         </form>
         <div className="sign-up-form-button-wrapper">
-          <button className="sign-up-form-button">
+          {activeStep > 1 && (
+            <button
+              className="sign-up-form-button sign-up-form-button-prev"
+              onClick={() => handleStepPrev()}
+            >
+              <svg
+                id="Group_156"
+                data-name="Group 156"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="8.04"
+                viewBox="0 0 16 8.04"
+              >
+                <path
+                  id="Path_15"
+                  data-name="Path 15"
+                  d="M15.894,131.133h0L12.258,127.5a.364.364,0,1,0-.513.513l3.014,3.018H.364a.364.364,0,0,0,0,.727h14.4l-3.014,3.014a.364.364,0,1,0,.513.513l3.636-3.636A.364.364,0,0,0,15.894,131.133Z"
+                  transform="translate(0 -127.369)"
+                  fill="#9396a2"
+                />
+              </svg>
+            </button>
+          )}
+          <button
+            className="sign-up-form-button sign-up-form-button-next"
+            onClick={() => handleStepNext()}
+          >
             <svg
               id="Group_156"
               data-name="Group 156"

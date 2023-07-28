@@ -1,0 +1,98 @@
+.sign-up-form-steps-container {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-up-form-steps-wrapper {
+  max-width: 25rem;
+  width: 100%;
+  display: flex;
+  //   justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0.2rem;
+    width: 8.8rem;
+    background-color: #616576;
+    transition: transform 0.3s ease-out;
+  }
+}
+
+.sign-up-form-steps-progress {
+  position: absolute;
+  top: 50%;
+  //   left: 25%;
+  transform: translate(-50%, -50%);
+  width: 4.4rem;
+  height: 0.2rem;
+  background-color: $color-blue;
+  z-index: 0;
+}
+
+.sign-up-form-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+// .sign-up-form-step-line {
+//   width: 8.8rem;
+//   height: 0.2rem;
+//   background-color: #616576;
+//   display: flex;
+//   align-items: center;
+//   //   margin-top: -1rem;
+//   position: relative;
+// }
+
+// .sign-up-form-step-line-inner {
+//   position: absolute;
+//   width: 50%;
+//   height: 0.2rem;
+//   top: 50%;
+//   left: 0;
+//   transform: translateY(-50%);
+//   background-color: $color-blue;
+// }
+
+.sign-up-form-step-number {
+  font-size: 1.8rem;
+  font-family: "Montserrat-Medium";
+  line-height: 2.2rem;
+  color: #616576;
+  background-color: #1f2431;
+  //   padding: 0.9rem 1.5rem;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.2rem solid #616576;
+  border-radius: 100%;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+}
+.sign-up-form-step-number.focus {
+  border: 0.2rem solid #adb4dd;
+}
+.sign-up-form-step-number.active {
+  color: $color-light-blue;
+  border: 0.2rem solid $color-blue;
+  transition: all 0.3s ease-out;
+
+  svg {
+    color: $color-blue;
+    font-size: 2.5rem;
+    transition: all 0.3s ease-out;
+  }
+}

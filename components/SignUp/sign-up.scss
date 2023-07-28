@@ -21,6 +21,7 @@
 .sign-up-form-left {
   justify-self: center;
   align-self: center;
+  min-height: 69.4rem;
 }
 .sign-up-form-header {
   display: flex;
@@ -45,65 +46,65 @@
 
 // steps
 
-.sign-up-form-steps-container {
-  margin-top: 4rem;
-  margin-bottom: 6rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+// .sign-up-form-steps-container {
+//   margin-top: 4rem;
+//   margin-bottom: 6rem;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
 
-.sign-up-form-steps-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// .sign-up-form-steps-wrapper {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 
-.sign-up-form-step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.sign-up-form-step-line {
-  width: 8.8rem;
-  height: 0.2rem;
-  background-color: #616576;
-  display: flex;
-  align-items: center;
-  //   margin-top: -1rem;
-  position: relative;
-}
+// .sign-up-form-step {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+// .sign-up-form-step-line {
+//   width: 8.8rem;
+//   height: 0.2rem;
+//   background-color: #616576;
+//   display: flex;
+//   align-items: center;
+//   //   margin-top: -1rem;
+//   position: relative;
+// }
 // asta cand e activ si a trecut de step 1
-.sign-up-form-step-line-inner {
-  position: absolute;
-  width: 50%;
-  height: 0.2rem;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  background-color: $color-blue;
-}
+// .sign-up-form-step-line-inner {
+//   position: absolute;
+//   width: 50%;
+//   height: 0.2rem;
+//   top: 50%;
+//   left: 0;
+//   transform: translateY(-50%);
+//   background-color: $color-blue;
+// }
 
-.sign-up-form-step-number {
-  font-size: 1.8rem;
-  font-family: "Montserrat-Medium";
-  line-height: 2.2rem;
-  color: $color-light-blue;
-  //   padding: 0.9rem 1.5rem;
-  width: 4rem;
-  height: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 0.2rem solid #616576;
-  border-radius: 100%;
-}
-.sign-up-form-step-number.focus {
-  border: 0.2rem solid #adb4dd;
-}
-.sign-up-form-step-number.active {
-  border: 0.2rem solid $color-blue;
-}
+// .sign-up-form-step-number {
+//   font-size: 1.8rem;
+//   font-family: "Montserrat-Medium";
+//   line-height: 2.2rem;
+//   color: $color-light-blue;
+//   //   padding: 0.9rem 1.5rem;
+//   width: 4rem;
+//   height: 4rem;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   border: 0.2rem solid #616576;
+//   border-radius: 100%;
+// }
+// .sign-up-form-step-number.focus {
+//   border: 0.2rem solid #adb4dd;
+// }
+// .sign-up-form-step-number.active {
+//   border: 0.2rem solid $color-blue;
+// }
 
 .sign-up-form-step-title-wrapper {
   width: 100%;
@@ -128,8 +129,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  //   gap: 1rem;
+  margin-bottom: 4rem;
+}
+.sign-up-form-step-1,
+.sign-up-form-step-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 1rem;
-  margin-bottom: 2rem;
+  transition: 0.3s ease-out;
+}
+.sign-up-form-step-2 {
+  //   margin-bottom: 6rem;
 }
 
 .sign-up-form-row {
@@ -156,6 +169,37 @@
     outline: none;
   }
 }
+.sign-up-form-submit-button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+}
+.sign-up-form-submit-button {
+  font-size: 1.6rem;
+  font-family: "Montserrat-Medium";
+  line-height: 1.9rem;
+  background-color: #0f1523;
+  border: none;
+  border-radius: 2.5rem;
+  max-width: 25rem;
+  max-height: 4.9rem;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem 6.2rem;
+  color: $color-light-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-blue;
+    transition: background-color 0.2s ease-out;
+  }
+}
 
 .sign-up-form-button-wrapper {
   width: 100%;
@@ -163,6 +207,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
+  gap: 2rem;
 }
 
 .sign-up-form-button {
@@ -183,6 +228,11 @@
   }
   &:hover svg path {
     fill: $color-light-blue;
+  }
+}
+.sign-up-form-button-prev {
+  svg {
+    transform: rotate(-180deg);
   }
 }
 

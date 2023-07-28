@@ -1,3 +1,5 @@
+import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
+
 const SignIn = () => {
   return (
     <div className="sign-in-container">
@@ -26,7 +28,7 @@ const SignIn = () => {
           </header>
         </div>
         <form className="sign-in-form" action="">
-          <div className="sign-in-form-group">
+          <div className="sign-in-form-group sign-in-form-group-email">
             <input
               className="sign-in-form-input"
               type="text"

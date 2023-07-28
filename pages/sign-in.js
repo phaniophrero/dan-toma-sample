@@ -18,6 +18,7 @@ const SignInPage = () => {
   ) : (
     //   return (
     <div className="sign-in-page">
+      <div className="overlay"></div>
       <SignIn />
     </div>
   );
