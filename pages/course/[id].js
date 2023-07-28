@@ -60,7 +60,7 @@ const CoursePage = () => {
         {courses
           .filter((item) => item.id == router.query.id)
           .map((item) => (
-            <ProductCard item={item} />
+            <ProductCard item={item} key={item.id} />
           ))}
       </div>
     </>

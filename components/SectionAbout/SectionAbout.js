@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const sectionAboutData = [
   {
     id: 1,
@@ -37,7 +39,9 @@ const SectionAbout = () => {
   return (
     <section className="section-about-container">
       <header className="section-about-header-title-wrapper">
-        <h1 className="section-about-header-title">Scrambled it to make a'</h1>
+        <h1 className="section-about-header-title">
+          Scrambled it to make a&apos;
+        </h1>
         <span className="section-about-header-title-line"></span>
         <p className="section-about-header-description">
           Of type and scrambled it to make a type specimen book. It has survived
@@ -85,7 +89,9 @@ const SectionAbout = () => {
               }`}
             >
               <div className="section-about-card-image-wrapper">
-                <img
+                <Image
+                  width={500}
+                  height={280}
                   className="section-about-card-image"
                   src={card.image}
                   alt={card.title}

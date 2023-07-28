@@ -1,10 +1,15 @@
+import Image from "next/image";
+
 const Newsletter = () => {
   return (
     <section className="section-newsletter">
       <div className="section-newsletter-wrapper">
         <div className="section-newsletter-col1">
           <span className="newsletter-image-filter"></span>
-          <img
+          <Image
+            width={450}
+            x
+            height={250}
             className="newsletter-img"
             src="/images/trading-img.png"
             alt="newsletter image"

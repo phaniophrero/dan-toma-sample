@@ -1,8 +1,10 @@
+import Image from "next/image";
+
 export const Loading = () => {
   return (
     <div className="loading-container">
       <div className="logo-loading">
-        <img src="/images/logo-dan-toma.png" alt="logo dan toma" />
+        <Image width={55} src="/images/logo-dan-toma.png" alt="logo dan toma" />
         <span className="loading-logo-text">DAN TOMA</span>
       </div>
 

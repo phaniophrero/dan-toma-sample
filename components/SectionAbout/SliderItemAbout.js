@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import { forwardRef } from "react";
+import Image from "next/image";
 
 export const SliderItemAbout = forwardRef(({ item, index, width }, ref) => {
   return (
@@ -11,7 +12,7 @@ export const SliderItemAbout = forwardRef(({ item, index, width }, ref) => {
       ref={ref}
     >
       <span className="slider-about-item-text-bg">
-        <img src={item.image} alt={item.title} />
+        <Image width={500} height={280} src={item.image} alt={item.title} />
       </span>
       <div className="slider-about-item-text">
         <h1 className="slider-about-item-title">{item.title}</h1>

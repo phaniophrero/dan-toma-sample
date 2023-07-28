@@ -1,10 +1,13 @@
+import Image from "next/image";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 
 const SignIn = () => {
   return (
     <div className="sign-in-container">
       <div className="sign-in-form-logo-wrapper-top">
-        <img
+        <Image
+          width={89}
+          height={60}
           className="sign-in-form-logo-image"
           src="/images/logo-dan-stock.png"
           alt="logo stock force one"
@@ -13,7 +16,9 @@ const SignIn = () => {
       <div className="sign-in-form-left">
         <div className="sign-in-form-text-middle">
           <div className="sign-in-form-text-image-wrapper-2">
-            <img
+            <Image
+              width={86}
+              height={100}
               className="sign-in-form-text-image-2"
               src="/images/token-img.png"
               alt="token image"

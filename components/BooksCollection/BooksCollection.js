@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { BsArrowRight } from "react-icons/bs";
 
 const BooksCollection = () => {
@@ -9,7 +10,7 @@ const BooksCollection = () => {
         </div>
         <div className="section-books-collection-cols-wrapper">
           <div className="section-books-collection-col1">
-            <img src="./images/books-img.png" alt="books-collection-image" />
+            {/* <Image src="./images/books-img.png" alt="books-collection-image" /> */}
           </div>
           <div className="section-books-collection-col2">
             <div className="section-books-collection-title-wrapper">

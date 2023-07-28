@@ -5,6 +5,8 @@ import { FaGreaterThan } from "react-icons/fa6";
 import { Loading } from "../../../components/Loading/Loading";
 import ProductCard from "../../../components/ProductCard/ProductCard";
 import courses from "../../../data/coursesData";
+import Link from "next/link";
+import Image from "next/image";
 
 const coursesData = [
   {
@@ -61,16 +63,16 @@ const CheckoutPage = () => {
       // return (
       <section className="section-checkout-container">
         <div className="section-checkout-nav">
-          <a className="section-checkout-nav-link" href="/courses">
+          <Link className="section-checkout-nav-link" href="/courses">
             <span className="section-checkout-nav-back-icon">
               <IoIosArrowDropleft />
             </span>
             Back
-          </a>
+          </Link>
           <div className="section-checkout-nav-2">
-            <a className="section-checkout-nav-2-link" href="/courses">
+            <Link className="section-checkout-nav-2-link" href="/courses">
               Courses
-            </a>{" "}
+            </Link>{" "}
             <span className="section-checkout-nav-2-icon">
               <FaGreaterThan />
             </span>
@@ -84,7 +86,9 @@ const CheckoutPage = () => {
             <div className="section-checkout-product" key={item.id}>
               <div className="section-checkout-product-image-wrapper">
                 <span className="section-checkout-product-image-tag">NEW</span>
-                <img
+                <Image
+                  width={600}
+                  height={350}
                   className="section-checkout-product-image"
                   src={item.image}
                   alt="course product image"

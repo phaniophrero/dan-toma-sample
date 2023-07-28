@@ -1,5 +1,6 @@
 import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
+import Image from "next/image";
 
 const ProductCard = ({ item }) => {
   return (
@@ -7,7 +8,9 @@ const ProductCard = ({ item }) => {
       <div className="product-card-container">
         {item.new ? <span className="product-card-tag-new">NEW</span> : ""}
         <div className="product-card-image-wrapper">
-          <img
+          <Image
+            width={450}
+            height={250}
             className="product-card-image"
             src={item.image}
             alt={item.title}
