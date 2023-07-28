@@ -18,23 +18,34 @@ const SignUp = () => {
   const [step, setStep] = useState(1);
   const [activeStep, setActiveStep] = useState(1);
   const [widthStep, setWidthStep] = useState();
+  const [showForm, setShowForm] = useState(false);
+
+  useEffect(() => {
+    if (showForm) {
+      setTimeout(() => {
+        setShowForm(true);
+      }, 2000);
+    } else {
+      setShowForm(false);
+    }
+  }, []);
 
   const handleStepNext = () => {
-    // if (activeStep >= 1) {
-    //   setActiveStep(activeStep);
-    // } else {
-    // }
     if (activeStep > formSteps.length - 1) {
       setActiveStep(1);
+      setShowForm(false);
     } else {
       setActiveStep(activeStep + 1);
+      setShowForm(true);
     }
   };
   const handleStepPrev = () => {
     if (activeStep < formSteps.length - 1) {
       setActiveStep(1);
+      setShowForm(true);
     } else {
       setActiveStep(activeStep - 1);
+      setShowForm(false);
     }
   };
 
@@ -53,10 +64,8 @@ const SignUp = () => {
             <div
               className="sign-up-form-steps-progress"
               style={{
-                width: `${activeStep > 1 ? "8.8rem" : "4.4rem"}`,
-                transform: `translate(${
-                  activeStep > 1 ? "0%, -50%" : "-50%, -50%"
-                })`,
+                width: `${showForm ? "8.8rem" : "4.4rem"}`,
+                transform: `translate(${showForm ? "0%, -50%" : "-50%, -50%"})`,
                 transition: "transform 0.3s ease-out",
               }}
             ></div>
@@ -85,8 +94,8 @@ const SignUp = () => {
           </div>
         </div>
         <form className="sign-up-form" action="">
-          {activeStep === formSteps.length - 1 ? (
-            <div className="sign-up-form-step-1">
+          {!showForm ? (
+            <div className={`sign-up-form-step-1 ${!showForm ? "active" : ""}`}>
               <div className="sign-up-form-row">
                 <input
                   className="sign-up-form-input"
@@ -145,7 +154,7 @@ const SignUp = () => {
               </div>
             </div>
           ) : (
-            <div className="sign-up-form-step-2">
+            <div className={`sign-up-form-step-2 ${showForm ? "active" : ""}`}>
               <div className="sign-up-form-row">
                 <input
                   className="sign-up-form-input"

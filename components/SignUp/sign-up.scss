@@ -141,8 +141,25 @@
   gap: 1rem;
   transition: 0.3s ease-out;
 }
+.sign-up-form-step-1.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sign-up-form-step-1 {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-out;
+}
+
 .sign-up-form-step-2 {
-  //   margin-bottom: 6rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-out;
+}
+.sign-up-form-step-2.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .sign-up-form-row {
