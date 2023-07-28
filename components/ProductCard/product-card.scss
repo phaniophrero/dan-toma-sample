@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: column;
 
-  max-width: 45rem;
-  max-height: 50rem;
-  min-height: 50rem;
-  min-width: 45rem;
+  max-width: 37rem;
+  min-width: 37rem;
+  max-height: 47.7rem;
+  min-height: 47.7rem;
 
   background-color: #000000;
   border-radius: 0.5rem;
@@ -47,14 +47,14 @@
 .product-card-text {
   display: flex;
   flex-direction: column;
-  gap: 8rem;
-  padding: 3rem;
+  gap: 4rem;
+  padding: 2rem;
 }
 
 .product-card-title {
   display: flex;
   align-items: center;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   line-height: 4.5rem;
   height: 5.5rem;
   width: max-content;
@@ -91,20 +91,29 @@
   justify-content: space-between;
 }
 
+.product-card-button-wrapper {
+  width: 100%;
+  display: flex;
+}
 .product-card-button {
   display: flex;
   align-items: center;
   border: none;
   background: none;
   color: $color-light-blue;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: "Montserrat-Regular";
   position: relative;
   z-index: 1;
   transition: width 0.2s ease-in-out;
 
   &:hover .product-button-icon {
-    animation: none;
+    // animation: none;
+    // aici animation end
+    opacity: 0;
+    transform: translate(20px, 0);
+    transition: 0.6s ease-out;
+    transition-delay: 0.3s;
   }
 
   &::before {
@@ -137,7 +146,7 @@
     display: flex;
     align-items: center;
     margin-left: 1rem;
-    animation: nudge 1s linear infinite alternate;
+    animation: nudge 1s linear infinite;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
@@ -150,10 +159,10 @@
 
   @keyframes nudge {
     0%,
-    40% {
+    30% {
       transform: translate(0px, 0);
     }
-    20% {
+    70% {
       transform: translate(10px, 0);
     }
   }
@@ -179,10 +188,11 @@
 .product-card-container:hover .product-button-icon {
   // display: none;
   opacity: 0;
-  transform: translate(90%, 0);
+  transform: translate(20px, 0);
   transition: 0.6s ease-out;
-  //   transition-delay: 0.1s;
-  animation: none;
+  transition-delay: 0.3s;
+  // animation: none;
+  // de facut animatia pentru iesire a sagetii catre dreapta
 }
 
 // animation button bg blue on card hover

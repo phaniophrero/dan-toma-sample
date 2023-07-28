@@ -132,8 +132,7 @@ export const Slider = ({ autoplayInterval }) => {
           <button onClick={prevHandleSlide} className="button-arrow">
             <span className="btn-arrow-icon btn-arrow-icon-left">
               <IoIosArrowDropleft />
-            </span>{" "}
-            Prev
+            </span>
           </button>
           <button
             // onClick={() => {
@@ -146,7 +145,6 @@ export const Slider = ({ autoplayInterval }) => {
             // onClick={nextSlide}
             className="button-arrow"
           >
-            Next
             <span className="btn-arrow-icon btn-arrow-icon-right">
               <IoIosArrowDropright />
             </span>

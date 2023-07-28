@@ -1,0 +1,336 @@
+.sign-in-page {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.sign-in-container {
+  max-width: 1200px;
+  width: 100%;
+  //   display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  //   gap: 12.5rem;
+  margin: 25rem 0;
+  justify-content: center;
+  background-color: #1f2431;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  height: 80rem;
+  position: relative;
+}
+
+.sign-in-form-left {
+  justify-self: center;
+  align-self: center;
+}
+.sign-in-form-logo-wrapper-top {
+  width: 8.9rem;
+  height: 6rem;
+  display: flex;
+  margin: 4rem 0 0 4rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.sign-in-form-logo-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.sign-in-form-text-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sign-in-form-text-image-wrapper-2 {
+  width: 8.673rem;
+  height: 10rem;
+  display: flex;
+}
+.sign-in-form-text-image-2 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.sign-in-form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.sign-in-form-header-title {
+  font-size: 4rem;
+  font-family: "Lora-Regular";
+  line-height: 5.1rem;
+  color: $color-light-blue;
+  font-weight: 200;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -1.2rem;
+    transform: translateX(-50%);
+    width: 4rem;
+    height: 0.3rem;
+    background-color: #6492ff;
+  }
+}
+.sign-in-form-header-description {
+  color: $color-light-blue;
+  text-align: center;
+  width: 32rem;
+  white-space: normal;
+  font-size: 1.6rem;
+  font-family: "Montserrat-Medium";
+  line-height: 2.5rem;
+}
+
+// FORM
+.sign-in-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6rem;
+}
+.sign-in-form-group {
+  width: 35rem;
+  height: 5.1rem;
+  display: flex;
+  margin-bottom: 2rem;
+}
+.sign-in-form-input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+  padding: 1.6rem 2rem;
+  color: $color-light-blue;
+  background-color: #000000;
+  caret-color: $color-light-blue;
+  transition: border 0.2s ease-out;
+
+  &::placeholder {
+    color: #9396a2;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid $color-blue;
+    border-color: $color-blue;
+    transition: border 0.2s ease-out;
+  }
+}
+
+.sign-in-form-group-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.sign-in-form-remember {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sign-in-form-checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+
+  accent-color: #000;
+}
+
+.sign-in-form-remember-text {
+  font-size: 1.2rem;
+  font-family: "Montserrat-Medium";
+  line-height: 1.5rem;
+  color: #eaf0ff;
+}
+
+.sign-in-form-forgot {
+  display: flex;
+}
+.sign-in-form-link-simple {
+  font-size: 1.2rem;
+  font-family: "Montserrat-Medium";
+  line-height: 1.5rem;
+  color: #eaf0ff;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.sign-in-form-link-blue {
+  color: #6492ff;
+  font-size: 1.3rem;
+  font-family: "Montserrat-Medium";
+  line-height: 1.5rem;
+  &:hover {
+    color: $color-blue;
+  }
+}
+
+.sign-in-form-button-wrapper {
+  margin-top: 6rem;
+}
+.sign-in-form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  font-family: "Montserrat-Medium";
+  line-height: 1.9rem;
+  color: $color-light-blue;
+  background-color: $color-blue;
+  border-radius: 2.5rem;
+  border: none;
+  padding: 1.5rem 10.7rem;
+  cursor: pointer;
+  margin-bottom: 4rem;
+
+  &:hover {
+    background-color: #6492ff;
+  }
+}
+
+.sign-in-form-bottom {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.sing-in-form-bottom-text {
+  color: $color-light-blue;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-family: "Montserrat-Medium";
+}
+.sign-in-form-link {
+  display: flex;
+  align-items: center;
+  color: #6492ff;
+  &:hover {
+    color: $color-blue;
+  }
+}
+
+// Right Side
+
+.sign-in-form-right {
+  width: 100%;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: flex-end;
+  position: relative;
+}
+.sign-in-form-right-image-wrapper {
+  width: 58rem;
+  height: 76rem;
+  display: flex;
+  border-radius: 4rem 0.5rem 4rem 0.5rem;
+  position: relative;
+  background-image: url("/images/123.jpeg");
+  background-size: 200%;
+  background-position-y: 100%;
+  background-position-x: 20%;
+  background-repeat: no-repeat;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 58rem;
+    height: 76rem;
+    background-color: rgba(#000, 0.6);
+    border-radius: 4rem 0.5rem 4rem 0.5rem;
+  }
+}
+// .sign-in-form-right-image {
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   border-radius: 4rem 0.5rem 4rem 0.5rem;
+// }
+
+.sign-in-form-right-title-top-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4rem 0.5rem 4rem 0.5rem;
+  padding: 3rem 3rem 4rem 3rem;
+  background-color: rgba(#000, 0.5);
+}
+.sign-in-form-right-title-top {
+  font-size: 3rem;
+  font-family: "Lora-Regular";
+  font-weight: 200;
+  line-height: 3.8rem;
+  color: $color-light-blue;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    width: 4rem;
+    height: 0.2rem;
+    background-color: #6492ff;
+  }
+}
+
+.sign-in-form-right-text-bottom {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  white-space: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(#000, 0.5);
+  height: 21.3rem;
+  width: 100%;
+  border-bottom-right-radius: 4rem;
+}
+.sign-in-form-quotes {
+  color: $color-light-blue;
+  font-size: 14rem;
+  font-family: "Montserrat-Regular";
+  line-height: 3.3rem;
+  font-weight: 200;
+  //   position: absolute;
+  margin-top: -7rem;
+}
+
+.sign-in-form-right-title-text {
+  color: $color-light-blue;
+  width: 46.2rem;
+  display: flex;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 200;
+  font-family: "Montserrat-Regular";
+  line-height: 3.3rem;
+}
+
+.sign-in-form-buttons-prev-next {
+  display: flex;
+  gap: 2rem;
+  position: absolute;
+  bottom: 2rem;
+}
+.sign-in-form-buttons-prev-link,
+.sign-in-form-buttons-next-link {
+  color: #9396a2;
+  svg {
+    font-size: 3rem;
+  }
+}

@@ -32,12 +32,12 @@
   white-space: nowrap;
   transition: transform 1s ease-in-out;
   // box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  @media screen and (max-width: 1200px) {
-    align-items: center;
-    // white-space: pre-wrap;
-    // flex-direction: column;
-    flex-direction: column-reverse;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   align-items: center;
+  //   // white-space: pre-wrap;
+  //   // flex-direction: column;
+  //   flex-direction: column-reverse;
+  // }
 }
 
 .section-title-wrapper {
@@ -79,10 +79,10 @@
 
 .left-col {
   width: 45%;
-  @media screen and (max-width: 1200px) {
-    width: 100%;
-    padding: 0 4rem;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   width: 100%;
+  //   padding: 0 4rem;
+  // }
 }
 .right-col {
   flex-grow: 1;
@@ -106,18 +106,18 @@ h1 {
   font-size: 4rem;
   margin: 0;
   // margin-left: 2rem;
-  @media screen and (max-width: 1200px) {
-    font-size: clamp(2.5rem, 3.3vw, 4rem);
-  }
+  // @media screen and (max-width: 1200px) {
+  //   font-size: clamp(2.5rem, 3.3vw, 4rem);
+  // }
 }
 .subhead {
   margin-left: 2rem;
   margin-top: 2rem;
   font-size: 1.8rem;
   white-space: normal;
-  @media screen and (max-width: 1200px) {
-    margin-left: 0;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   margin-left: 0;
+  // }
 }
 .cta-btns {
   margin: 10rem 0;
@@ -209,11 +209,11 @@ p.details {
   background-image: url("/images/1.jpeg");
   background-repeat: no-repeat;
   position: relative;
-  @media screen and (max-width: 1200px) {
-    height: 45rem;
-    background-size: 250%;
-    background-position-x: 70%;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   height: 45rem;
+  //   background-size: 250%;
+  //   background-position-x: 70%;
+  // }
 }
 
 // .card1:before {
@@ -231,20 +231,20 @@ p.details {
   grid-area: right;
   background-image: url("/images/2.jpeg");
   background-repeat: no-repeat;
-  @media screen and (max-width: 1200px) {
-    background-size: 200%;
-    background-position-x: 40%;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   background-size: 200%;
+  //   background-position-x: 40%;
+  // }
 }
 .card3 {
   grid-area: bottom;
   background-image: url("/images/3.jpeg");
   background-repeat: no-repeat;
   background-position: 50%;
-  @media screen and (max-width: 1200px) {
-    background-size: 200%;
-    background-position-x: 40%;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   background-size: 200%;
+  //   background-position-x: 40%;
+  // }
 }
 
 .card-details {
@@ -291,28 +291,28 @@ nav ul li a:hover:before {
   background-size: 160%;
 }
 .card1:hover {
-  @media screen and (max-width: 1200px) {
-    background-size: 270%;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   background-size: 270%;
+  // }
 }
 .card2:hover {
-  @media screen and (max-width: 1200px) {
-    background-size: 230%;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   background-size: 230%;
+  // }
 }
 .card3:hover {
-  @media screen and (max-width: 1200px) {
-    background-size: 230%;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   background-size: 230%;
+  // }
 }
 
 .card:hover .card-details {
   transform: translateY(-20px);
 }
 .card:hover .card-details {
-  @media screen and (max-width: 1200px) {
-    transform: translateY(-20px);
-  }
+  // @media screen and (max-width: 1200px) {
+  //   transform: translateY(-20px);
+  // }
 }
 
 /* Intro Animation */

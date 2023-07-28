@@ -1,0 +1,203 @@
+.sign-up-page {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+.sign-up-container {
+  max-width: 1200px;
+  width: 100%;
+  //   display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  //   gap: 12.5rem;
+  margin: 25rem 0;
+  justify-content: center;
+  background-color: #1f2431;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  height: 80rem;
+}
+.sign-up-form-left {
+  justify-self: center;
+  align-self: center;
+}
+.sign-up-form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.sign-up-form-title {
+  font-size: 3rem;
+  font-family: "Lora-Regular";
+  font-weight: 200;
+  line-height: 3.8rem;
+  color: $color-light-blue;
+}
+.sign-up-form-subtitle {
+  font-size: 1.8rem;
+  font-family: "Montserrat-Regular";
+  font-weight: 200;
+  line-height: 2.2rem;
+  color: $color-light-blue;
+}
+
+// steps
+
+.sign-up-form-steps-container {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-up-form-steps-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up-form-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sign-up-form-step-line {
+  width: 8.8rem;
+  height: 0.2rem;
+  background-color: #616576;
+  display: flex;
+  align-items: center;
+  //   margin-top: -1rem;
+  position: relative;
+}
+// asta cand e activ si a trecut de step 1
+.sign-up-form-step-line-inner {
+  position: absolute;
+  width: 50%;
+  height: 0.2rem;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: $color-blue;
+}
+
+.sign-up-form-step-number {
+  font-size: 1.8rem;
+  font-family: "Montserrat-Medium";
+  line-height: 2.2rem;
+  color: $color-light-blue;
+  //   padding: 0.9rem 1.5rem;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.2rem solid #616576;
+  border-radius: 100%;
+}
+.sign-up-form-step-number.focus {
+  border: 0.2rem solid #adb4dd;
+}
+.sign-up-form-step-number.active {
+  border: 0.2rem solid $color-blue;
+}
+
+.sign-up-form-step-title-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  //   gap: 5rem;
+}
+.sign-up-form-step-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #616576;
+}
+.sign-up-form-step-title.active {
+  color: #adb4dd;
+}
+
+.sign-up-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.sign-up-form-row {
+  max-width: 25rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up-form-input {
+  display: flex;
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 1rem 0;
+  border-bottom: 0.1rem solid #616576;
+  color: $color-light-blue;
+  caret-color: $color-light-blue;
+
+  &::placeholder {
+    font-size: 1.4rem;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.sign-up-form-button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.sign-up-form-button {
+  padding: 0.6rem 2.4rem;
+  width: 6.4rem;
+  height: 2.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem solid #9396a2;
+  border-radius: 1.1rem;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    border: 0.1rem solid $color-blue;
+    background-color: $color-blue;
+  }
+  &:hover svg path {
+    fill: $color-light-blue;
+  }
+}
+
+.sign-up-form-bottom-row {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+.sign-up-form-bottom-text {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: $color-light-blue;
+}
+.sign-up-form-bottom-link {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #6492ff;
+}

@@ -13,7 +13,7 @@ const NavbarMegaMenu = () => {
   const [activeResources, setActiveResources] = useState(false);
 
   const router = useRouter();
-  console.log(router.pathname);
+  // console.log(router.pathname);
 
   const changeNavbarBgColor = () => {
     if (window.scrollY >= 90) {

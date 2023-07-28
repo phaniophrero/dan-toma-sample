@@ -2,22 +2,25 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import NavbarMegaMenu from "../components/NavbarMegaMenu/NavbarMegaMenu";
-import CountdownTimer from "../components/CountdownTimer/CountdownTimer";
 import { Slider } from "../components/Slider/Slider";
-import SectionCourses from "../components/SectionCourses/SectionCourses";
-import StockQuotes from "../components/StockQuotes/StockQuotes";
-import BooksCollection from "../components/BooksCollection/BooksCollection";
-import Newsletter from "../components/Newsletter/Newsletter";
 import SocialMedia from "../components/SocialMedia/SocialMedia";
-import Footer from "../components/Footer/Footer";
+import SectionAbout from "../components/SectionAbout/SectionAbout";
+import { SliderAbout } from "../components/SectionAbout/SliderAbout";
+// import CountdownTimer from "../components/CountdownTimer/CountdownTimer";
+// import SectionCourses from "../components/SectionCourses/SectionCourses";
+// import StockQuotes from "../components/StockQuotes/StockQuotes";
+// import BooksCollection from "../components/BooksCollection/BooksCollection";
+// import Newsletter from "../components/Newsletter/Newsletter";
 
 import { Loading } from "../components/Loading/Loading";
+import AboutMe from "../components/AboutMe/AboutMe";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
-  const THREE_DAYS_IN_MS = 3 * 24 * 60 * 60 * 1000;
-  const NOW_IN_MS = new Date().getTime();
-  const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
+  // Discount Countdown
+  // const THREE_DAYS_IN_MS = 3 * 24 * 60 * 60 * 1000;
+  // const NOW_IN_MS = new Date().getTime();
+  // const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
 
   if (loading) {
     setTimeout(() => {
@@ -49,37 +52,16 @@ export default function Home() {
         <div className="hero-area">
           <Slider autoplayInterval={6000} />
         </div>
-        {/* Hard coded Section Hero */}
-        {/* <section className="hero-video-area">
-          <div className="text-bg">
-            <span className="bg-patrat"></span>
-            <div className="text">
-              <h1 className="title">Dan Toma</h1>
-              <span className="line"></span>
-              <p className="description">
-                Imprimeur anonyme assembla ensemble des morceaux de texte pour
-                réaliser un livre spécimen de polices de texte. Il n’a pas fait
-                que survivre cinq siècles, mais s’est aussi adapt à la
-                bureautique informatique, sans que son contenu n’en soit
-                modifié.
-              </p>
-            </div>
-          </div>
-          <span className="video-filter"></span>
-          <div className="video-wrapper">
-            <video
-              className="video"
-              autoPlay={"autoplay"}
-              preload="auto"
-              muted
-              loop
-            >
-              <source src="/video/video.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </section> */}
+        <span className="line-background line-bg-1"></span>
+        <span className="line-background line-bg-2"></span>
+        <span className="line-background line-bg-3"></span>
+        <span className="line-background line-bg-4"></span>
+        <span className="line-background line-bg-5"></span>
 
-        <SectionCourses />
+        <SectionAbout />
+        <SliderAbout autoplayInterval={6000} />
+        <AboutMe />
+
         <SocialMedia />
       </main>
     </div>

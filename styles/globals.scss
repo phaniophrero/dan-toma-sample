@@ -10,11 +10,18 @@
 @import "../components/Newsletter/newsletter.scss";
 @import "../components/SocialMedia/social-media.scss";
 @import "../components/Footer/footer.scss";
+@import "../components/SignIn/sign-in.scss";
+@import "../components/SignUp/sign-up.scss";
+
+@import "../components/SectionAbout/section-about.scss";
 
 @import "../components/Loading/loading.scss";
 
 @import "../components/ProductCard/product-card.scss";
+@import "../components/AboutMe/about-me.scss";
 @import "./courses-page.scss";
+@import "./course-page.scss";
+@import "./checkout.scss";
 
 @mixin font($font-family, $font-file) {
   @font-face {
@@ -37,6 +44,8 @@
 @include font("Montserrat-SemiBold", "/fonts/montserrat/montserrat-SemiBold");
 @include font("Montserrat-Bold", "/fonts/montserrat/Montserrat-Bold");
 
+@include font("Arial-Black", "/fonts/arial-black/ariblk");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -58,7 +67,7 @@ body {
 
 .main {
   width: 100%;
-  // max-width: 1600px;
+  // max-width: 1200px;
   margin: 0 auto;
   // padding: 0 20px;
 }
@@ -128,7 +137,7 @@ a {
 
 .text-bg {
   position: absolute;
-  // max-width: 1600px;
+  // max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   z-index: 1;
@@ -151,7 +160,7 @@ a {
 
 .centered-slide {
   position: absolute;
-  max-width: 1600px;
+  max-width: 1200px;
   width: 100%;
   margin-left: 6.2rem;
   z-index: 1;
@@ -164,7 +173,7 @@ a {
 
 .text {
   position: absolute;
-  max-width: 1600px;
+  max-width: 1200px;
   width: 50%;
   margin-left: 6.2rem;
   z-index: 1;
@@ -210,6 +219,33 @@ a {
   display: flex;
   width: 100%;
   object-fit: fill;
+}
+
+// lines bg x5
+.line-background {
+  position: absolute;
+  top: 77.95rem;
+  height: 257.2rem;
+  width: 0.1rem;
+  background-color: #2e3246;
+  // z-index: -1;
+}
+
+.line-bg-1 {
+  left: 30rem;
+}
+
+.line-bg-2 {
+  left: 60rem;
+}
+.line-bg-3 {
+  left: 90rem;
+}
+.line-bg-4 {
+  left: 120rem;
+}
+.line-bg-5 {
+  left: 150rem;
 }
 
 @media (prefers-color-scheme: dark) {

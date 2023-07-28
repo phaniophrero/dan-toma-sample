@@ -1,0 +1,421 @@
+.section-checkout-container {
+  display: flex;
+  flex-direction: column;
+  margin: 15rem auto 0 auto;
+  max-width: 1200px;
+}
+.section-checkout-nav {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15rem;
+  gap: 4rem;
+  transition: 0.2s;
+
+  &:hover {
+    transition: 0.2s;
+    color: $color-blue;
+  }
+}
+.section-checkout-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: $color-light-blue;
+  transition: 0.2s;
+  &:hover {
+    color: $color-blue;
+    transition: 0.2s;
+  }
+}
+.section-checkout-nav-back-icon {
+  display: flex;
+  align-items: center;
+  svg {
+    font-size: 3rem;
+  }
+}
+
+.section-checkout-nav-2 {
+  display: flex;
+  gap: 0.5rem;
+  color: $color-light-blue;
+  margin-left: 4rem;
+}
+.section-checkout-nav-2-link {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-family: "Montserrat-Regular";
+  transition: color 0.2s;
+
+  &:hover {
+    color: $color-blue;
+    transition: color 0.2s;
+  }
+}
+.section-checkout-nav-2-link-active {
+  color: $color-blue;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-family: "Montserrat-Regular";
+}
+.section-checkout-nav-2-icon {
+  display: flex;
+  align-items: center;
+  svg {
+    font-size: 1.1rem;
+  }
+}
+
+.section-checkout-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-checkout-product-image-wrapper {
+  width: 60rem;
+  height: 35rem;
+  display: flex;
+  position: relative;
+}
+.section-checkout-product-image-tag {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.6rem;
+  font-family: "Montserrat-Bold";
+  color: $color-light-blue;
+  padding: 1rem 2rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  background-color: #003bff;
+}
+
+.section-checkout-product-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 10px rgba(#002cbf, 0.3);
+}
+
+.section-checkout-product-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+.section-checkout-product-title {
+  font-size: 5rem;
+  font-family: "Montserrat-SemiBold";
+  line-height: 6.1rem;
+  color: #858aa5;
+}
+.section-checkout-product-title-line {
+  width: 5rem;
+  height: 0.2rem;
+  background-color: #003bff;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+.section-checkout-product-description {
+  width: 59rem;
+  font-size: 1.8rem;
+  font-family: "Montserrat-Regular";
+  line-height: 2.6rem;
+  color: $color-light-blue;
+  text-align: center;
+}
+
+.section-checkout-product-discount {
+  font-size: 1.8rem;
+  font-family: "Montserrat-Regular";
+  line-height: 2.2rem;
+  color: $color-light-blue;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.section-checkout-product-discount-value {
+  color: #003bff;
+}
+
+.section-checkout-product-old-price {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-family: "Montserrat-Medium";
+  color: #adb4dd;
+  margin-bottom: 1rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 6.5rem;
+    height: 0.2rem;
+    background-color: #adb4dd;
+  }
+}
+.section-checkout-product-price {
+  font-size: 5rem;
+  line-height: 6.1rem;
+  font-family: "Montserrat-Medium";
+  color: #eaf0ff;
+}
+
+// form checkout
+.checkout-payment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.checkout-payment-form-title-wrapper {
+  margin-bottom: 5rem;
+  max-width: 35rem;
+  width: 100%;
+  display: flex;
+}
+
+.checkout-payment-form-title {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-family: "Montserrat-Medium";
+  color: $color-light-blue;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    width: 35rem;
+    height: 0.1rem;
+    background-color: #adb4dd;
+  }
+}
+
+.form-group-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.form-group-label {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: $color-light-blue;
+  margin-bottom: 1rem;
+}
+.form-group-input {
+  width: 35rem;
+  height: 5.4rem;
+  border-radius: 0.5rem;
+  background-color: #475065;
+  border: none;
+
+  padding: 0 2rem;
+  font-size: 2rem;
+  line-height: 2.4rem;
+
+  &::placeholder {
+    color: $color-light-blue;
+  }
+}
+
+.form-group-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-group-card-title-wrapper {
+  margin-bottom: 5rem;
+  display: flex;
+  width: 100%;
+  max-width: 35rem;
+}
+.form-group-card-title {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-family: "Montserrat-Medium";
+  color: $color-light-blue;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    width: 35rem;
+    height: 0.1rem;
+    background-color: #adb4dd;
+  }
+}
+.form-group-row-double-wrapper {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.form-group-row-double {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-input-expiration,
+.form-group-input-cvv {
+  width: 16.5rem;
+}
+
+.form-group-discount-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 35rem;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+.form-group-discount-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2rem;
+    width: 100%;
+    height: 0.1rem;
+    background-color: #adb4dd;
+  }
+}
+.form-group-discount-title,
+.form-group-discount-title-value {
+  color: $color-light-blue;
+  font-size: 2rem;
+  font-family: "Montserrat-Regular";
+  line-height: 2.4rem;
+}
+
+.form-group-discount-tva-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2rem;
+    width: 100%;
+    height: 0.1rem;
+    background-color: #adb4dd;
+  }
+}
+.form-group-discount-tva-title,
+.form-group-discount-tva-value {
+  color: $color-light-blue;
+  font-size: 2rem;
+  font-family: "Montserrat-Regular";
+  line-height: 2.4rem;
+}
+
+.form-group-discount-total-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.form-group-discount-total-title {
+  font-size: 2rem;
+  font-family: "Montserrat-Regular";
+  line-height: 2.4rem;
+  color: $color-light-blue;
+}
+.form-group-discount-total-price-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-group-discount-total-price-new {
+  font-size: 4rem;
+  line-height: 4.9rem;
+  color: $color-light-blue;
+}
+
+.form-group-discount-total-price-old {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-family: "Montserrat-Medium";
+  color: #adb4dd;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 6rem;
+    height: 0.2rem;
+    background-color: #adb4dd;
+  }
+}
+
+.form-group-payment-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35rem;
+  height: 5.4rem;
+  margin-top: 2rem;
+}
+
+.form-group-payment-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-family: "Montserrat-Regular";
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #003bff;
+  color: $color-light-blue;
+}
+
+// Slider similar products
+.slider-similar-courses {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20rem;
+  margin-bottom: 25rem;
+}
+.slider-similar-courses-title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10rem;
+}
+.slider-similar-courses-title {
+  font-size: 4rem;
+  line-height: 6.1rem;
+  font-family: "Montserrat-SemiBold";
+  color: #858aa5;
+}
+.slider-similar-courses-title-line {
+  width: 5rem;
+  height: 0.2rem;
+  background-color: #003bff;
+  margin-top: 1rem;
+}
+.slider-similar-courses-cards {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+}

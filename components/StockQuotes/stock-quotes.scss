@@ -1,6 +1,6 @@
 .stock-quotes-container {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1200px;
   display: flex;
   // margin-top: 10rem;
   margin: 10rem auto 0 auto;
@@ -8,14 +8,14 @@
 
 .nav-quotes {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media screen and (max-width: 1200px) {
-    flex-flow: wrap;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   flex-flow: wrap;
+  // }
 }
 
 .nav-quotes-list {
@@ -75,9 +75,9 @@
   justify-content: center;
   width: 100%;
   margin-top: 3rem;
-  @media screen and (max-width: 1200px) {
-    flex-flow: wrap;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   flex-flow: wrap;
+  // }
 }
 
 .quotes {
@@ -86,21 +86,21 @@
   align-items: center;
   // width: calc(960px * 3);
   width: 100%;
-  max-width: 1600px;
+  max-width: 1200px;
   transition: 0.3s;
-  @media screen and (max-width: 1200px) {
-    margin: 0 auto;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   margin: 0 auto;
+  // }
 }
 
 .quote {
   width: 100%;
   max-width: 1169px;
   gap: 2rem;
-  @media screen and (max-width: 1200px) {
-    justify-content: center;
-    flex-flow: wrap;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   justify-content: center;
+  //   flex-flow: wrap;
+  // }
 }
 
 .quote-card {
@@ -114,9 +114,9 @@
   gap: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 1px 8px rgba(#002cbf, 0.3);
-  @media screen and (max-width: 1200px) {
-    max-width: 25vw;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   max-width: 25vw;
+  // }
 }
 
 .arrow-icon {

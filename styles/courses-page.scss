@@ -1,6 +1,6 @@
 .courses-page-container {
   background-color: #0f1523;
-  max-width: 1600px;
+  max-width: 1200px;
   display: flex;
   //   justify-content: center;
   align-items: center;
@@ -12,8 +12,10 @@
 .courses-page-wrapper {
   margin: 0 auto;
   padding-top: 90px;
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 12.5rem;
 }
 
