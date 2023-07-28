@@ -57,6 +57,8 @@ export default function Home() {
         <span className="line-background line-bg-3"></span>
         <span className="line-background line-bg-4"></span>
         <span className="line-background line-bg-5"></span>
+        <span className="line-background line-bg-6"></span>
+        <span className="line-background line-bg-7"></span>
 
         <SectionAbout />
         <SliderAbout autoplayInterval={6000} />
