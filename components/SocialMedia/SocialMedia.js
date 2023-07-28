@@ -1,26 +1,27 @@
+import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const SocialMedia = () => {
   return (
     <div className="section-social-media">
       <div className="social-media facebook">
-        <a href="#facebook" className="social-media-text">
+        <Link href="#facebook" className="social-media-text">
           <span className="social-media-icon">
             <FaFacebookF />
           </span>
           Facebook
-        </a>
+        </Link>
       </div>
       <div className="social-media instagram">
-        <a href="#instagram" className="social-media-text">
+        <Link href="#instagram" className="social-media-text">
           <span className="social-media-icon">
             <FaInstagram />
           </span>
           Instagram
-        </a>
+        </Link>
       </div>
       <div className="social-media tiktok">
-        <a href="#tiktok" className="social-media-text">
+        <Link href="#tiktok" className="social-media-text">
           <span className="social-media-icon">
             <svg
               height="512"
@@ -37,23 +38,23 @@ const SocialMedia = () => {
             </svg>
           </span>
           TikTok
-        </a>
+        </Link>
       </div>
       <div className="social-media twitter">
-        <a href="#twitter" className="social-media-text">
+        <Link href="#twitter" className="social-media-text">
           <span className="social-media-icon">
             <FaTwitter />
           </span>
           Twittter
-        </a>
+        </Link>
       </div>
       <div className="social-media youtube">
-        <a href="#youtube" className="social-media-text">
+        <Link href="#youtube" className="social-media-text">
           <span className="social-media-icon">
             <FaYoutube />
           </span>
           YouTube
-        </a>
+        </Link>
       </div>
     </div>
   );

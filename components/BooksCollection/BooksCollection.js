@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 
 const BooksCollection = () => {
@@ -36,7 +37,7 @@ const BooksCollection = () => {
           </div>
         </div>
         <div className="section-books-link-wrapper">
-          <a href="#" className="section-books-link">
+          <Link href="#" className="section-books-link">
             See Collection{" "}
             <span className="section-books-icon">
               {" "}
@@ -48,7 +49,7 @@ const BooksCollection = () => {
                 />
               </svg>
             </span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

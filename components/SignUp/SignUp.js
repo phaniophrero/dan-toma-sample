@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { BsCheckLg } from "react-icons/bs";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import FormSteps from "../FormSteps/FormSteps";
+import Link from "next/link";
 
 const formSteps = [
   {
@@ -234,9 +235,9 @@ const SignUp = () => {
           <h2 className="sign-up-form-bottom-text">
             Already have an account ?
           </h2>
-          <a className="sign-up-form-bottom-link" href="/sing-in">
+          <Link className="sign-up-form-bottom-link" href="/sing-in">
             Sign In
-          </a>
+          </Link>
         </div>
       </div>
       <div className="sign-in-form-right">
@@ -251,12 +252,12 @@ const SignUp = () => {
             pas fait que
           </h3>
           <div className="sign-in-form-buttons-prev-next">
-            <a href="/sign-in" className="sign-in-form-buttons-prev-link">
+            <Link href="/sign-in" className="sign-in-form-buttons-prev-link">
               <IoIosArrowDropleft />
-            </a>
-            <a href="/sign-up" className="sign-in-form-buttons-next-link">
+            </Link>
+            <Link href="/sign-up" className="sign-in-form-buttons-next-link">
               <IoIosArrowDropright />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

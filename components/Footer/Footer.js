@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   FaFacebookF,
   FaInstagram,
@@ -15,56 +16,56 @@ const Footer = () => {
         <ul className="footer-social-media-list">
           <li className="footer-social-media-item">
             {/* Facebook */}
-            <a href="#" className="footer-social-media-link">
+            <Link href="#" className="footer-social-media-link">
               <FaFacebookF />
-            </a>
+            </Link>
           </li>
           <li className="footer-social-media-item">
             {/* Instagram */}
-            <a href="#" className="footer-social-media-link">
+            <Link href="#" className="footer-social-media-link">
               <FaInstagram />
-            </a>
+            </Link>
           </li>
           <li className="footer-social-media-item">
             {/* TikTok */}
-            <a href="#" className="footer-social-media-link">
+            <Link href="#" className="footer-social-media-link">
               <FaTiktok />
-            </a>
+            </Link>
           </li>
           <li className="footer-social-media-item">
             {/* Twitter */}
-            <a href="#" className="footer-social-media-link">
+            <Link href="#" className="footer-social-media-link">
               <FaTwitter />
-            </a>
+            </Link>
           </li>
           <li className="footer-social-media-item">
             {/* YouTube */}
-            <a href="#" className="footer-social-media-link">
+            <Link href="#" className="footer-social-media-link">
               <FaYoutube />
-            </a>
+            </Link>
           </li>
         </ul>
         <ul className="footer-row2-list">
           <li className="footer-row2-link">
-            <a href="#">Contact Us</a>
+            <Link href="#">Contact Us</Link>
           </li>
           <li className="footer-row2-link">
-            <a href="#">FAQ</a>
+            <Link href="#">FAQ</Link>
           </li>
           <li className="footer-row2-link">
-            <a href="#">GDPR</a>
+            <Link href="#">GDPR</Link>
           </li>
           <li className="footer-row2-link">
-            <a href="#">Privacy Policy</a>
+            <Link href="#">Privacy Policy</Link>
           </li>
 
           {/* <span className="footer-row2-link-dot"></span> */}
           <li className="footer-row2-link">
-            <a href="#">Terms & Conditions</a>
+            <Link href="#">Terms & Conditions</Link>
           </li>
           {/* <span className="footer-row2-link-dot"></span> */}
           <li className="footer-row2-link">
-            <a href="#">Disclaimer</a>
+            <Link href="#">Disclaimer</Link>
           </li>
         </ul>
       </div>

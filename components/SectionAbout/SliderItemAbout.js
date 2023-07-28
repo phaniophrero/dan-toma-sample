@@ -3,7 +3,7 @@ import { BsArrowRight } from "react-icons/bs";
 import { forwardRef } from "react";
 import Image from "next/image";
 
-export const SliderItemAbout = forwardRef(({ item, index, width }, ref) => {
+const SliderItemAbout = forwardRef(({ item, index, width }, ref) => {
   return (
     <div
       className="slider-about-item"
@@ -42,3 +42,5 @@ export const SliderItemAbout = forwardRef(({ item, index, width }, ref) => {
     </div>
   );
 });
+
+export default SliderItemAbout;

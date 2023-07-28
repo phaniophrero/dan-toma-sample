@@ -64,10 +64,10 @@ const SignIn = () => {
               </h3>
             </label>
             <div className="sign-in-form-forgot">
-              <a className="sign-in-form-link-simple" href="#">
+              <Link className="sign-in-form-link-simple" href="#">
                 Forgot <span className="sign-in-form-link-blue">password</span>{" "}
                 ?
-              </a>
+              </Link>
             </div>
           </div>
           <div className="sign-in-form-button-wrapper">
@@ -77,9 +77,9 @@ const SignIn = () => {
             <h3 className="sing-in-form-bottom-text">
               Don&apos;t have an account ?
             </h3>
-            <a className="sign-in-form-link" href="/sign-up">
+            <Link className="sign-in-form-link" href="/sign-up">
               Sign up
-            </a>
+            </Link>
           </div>
         </form>
       </div>

@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import { SliderItemAbout } from "./SliderItemAbout";
+import SliderItemAbout from "./SliderItemAbout";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 // import ProgressBar from "./ProgressBar";
 // import Circle from "../CircleProgress/Circle";

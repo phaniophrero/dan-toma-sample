@@ -59,8 +59,8 @@ const CheckoutPage = () => {
     <Loading />
   ) : (
     <>
+      {/* // return ( */}
       <div className="overlay"></div>
-      // return (
       <section className="section-checkout-container">
         <div className="section-checkout-nav">
           <Link className="section-checkout-nav-link" href="/courses">

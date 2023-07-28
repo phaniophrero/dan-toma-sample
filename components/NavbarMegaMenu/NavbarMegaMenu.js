@@ -6,6 +6,7 @@ import {
   navbarMegeMenuDataLeft,
   navbarMegeMenuDataRight,
 } from "../../data/navbarMegaMenuData";
+import Link from "next/link";
 
 const NavbarMegaMenu = () => {
   const [colorChangeBg, setColorChangeBg] = useState(false);
@@ -35,14 +36,14 @@ const NavbarMegaMenu = () => {
         <ul className="mega-menu-list mega-menu-list-left">
           {navbarMegeMenuDataLeft.map((navItemLeft) => (
             <li key={navItemLeft.id} className="mega-menu-item-tab">
-              <a
+              <Link
                 href={navItemLeft.path}
                 className={`mega-menu-item-link ${
                   navItemLeft.path === router.pathname ? "active" : ""
                 }`}
               >
                 {navItemLeft.tab}
-              </a>
+              </Link>
               {/* {navItemLeft.submenu && (
                 <div className="">
                   <div>
@@ -83,17 +84,17 @@ const NavbarMegaMenu = () => {
             className="mega-menu-item-tab"
             onMouseEnter={() => setActiveStrategies(true)}
           >
-            <a href="#" className="mega-menu-item-link">
+            <Link href="#" className="mega-menu-item-link">
               Knowledge
-            </a>
+            </Link>
           </li>
           <li
             className="mega-menu-item-tab"
             onMouseEnter={() => setActiveResources(true)}
           >
-            <a href="#" className="mega-menu-item-link">
+            <Link href="#" className="mega-menu-item-link">
               Resources
-            </a>
+            </Link>
           </li>
 
           {activeStrategies && (
@@ -431,9 +432,9 @@ const NavbarMegaMenu = () => {
         <ul className="mega-menu-list mega-menu-list-right">
           {navbarMegeMenuDataRight.map((itemRight) => (
             <li className="mega-menu-item-tab" key={itemRight.id}>
-              <a href={itemRight.path} className="mega-menu-item-link">
+              <Link href={itemRight.path} className="mega-menu-item-link">
                 {itemRight.tab ? itemRight.tab : itemRight.iconCart}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

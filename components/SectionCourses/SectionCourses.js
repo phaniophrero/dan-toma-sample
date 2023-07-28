@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState, useCallback, useRef } from "react";
 
 const slides = [
@@ -91,10 +92,10 @@ const SectionCourses = () => {
             </p>
 
             <div className="cta-btns">
-              <a href="#" className="primary-cta">
+              <Link href="#" className="primary-cta">
                 Sign in
-              </a>
-              <a href="#" className="secondary-cta">
+              </Link>
+              <Link href="#" className="secondary-cta">
                 <span>Sign up </span>
                 <svg viewBox="0 0 19 9" fill="none">
                   <path
@@ -102,7 +103,7 @@ const SectionCourses = () => {
                     fill="black"
                   />
                 </svg>
-              </a>
+              </Link>
             </div>
 
             {/* <div className="news">
@@ -118,9 +119,9 @@ const SectionCourses = () => {
             <div className="card card1">
               <div className="card-details">
                 <div>
-                  <a href="#" className="product-title">
+                  <Link href="#" className="product-title">
                     Mentoring Stocks
-                  </a>
+                  </Link>
                   <p>Buy now</p>
                 </div>
                 <p className="product-price">499€</p>
@@ -129,9 +130,9 @@ const SectionCourses = () => {
             <div className="card card2">
               <div className="card-details">
                 <div>
-                  <a href="#" className="product-title">
+                  <Link href="#" className="product-title">
                     Mentoring 1:1
-                  </a>
+                  </Link>
                   <p>Buy now</p>
                 </div>
                 <p className="product-price">566€</p>
@@ -140,9 +141,9 @@ const SectionCourses = () => {
             <div className="card card3">
               <div className="card-details">
                 <div>
-                  <a href="#" className="product-title">
+                  <Link href="#" className="product-title">
                     Mentoring US 30 Index
-                  </a>
+                  </Link>
                   <p>Buy now</p>
                 </div>
                 <p className="product-price">499€</p>

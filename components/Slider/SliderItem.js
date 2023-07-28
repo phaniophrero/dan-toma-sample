@@ -2,7 +2,7 @@ import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import { forwardRef } from "react";
 
-export const SliderItem = forwardRef(({ item, index, width }, ref) => {
+const SliderItem = forwardRef(({ item, index, width }, ref) => {
   return (
     <div className="slider-item" key={index} style={{ width: width }} ref={ref}>
       <section className="hero-video-area">
@@ -46,3 +46,5 @@ export const SliderItem = forwardRef(({ item, index, width }, ref) => {
     </div>
   );
 });
+
+export default SliderItem;
