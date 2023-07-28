@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import SliderItem from "./SliderItem";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import ProgressBar from "./ProgressBar";
-import { slides } from "../../data/sliderData.json";
+import slides from "../../data/sliderData";
 import Circle from "../CircleProgress/Circle";
 import Image from "next/image";
 import arrowLeft from "../../public/images/arrow-left.svg";

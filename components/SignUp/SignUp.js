@@ -235,7 +235,7 @@ const SignUp = () => {
           <h2 className="sign-up-form-bottom-text">
             Already have an account ?
           </h2>
-          <Link className="sign-up-form-bottom-link" href="/sing-in">
+          <Link className="sign-up-form-bottom-link" href="/sign-in">
             Sign In
           </Link>
         </div>
