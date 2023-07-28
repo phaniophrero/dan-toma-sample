@@ -4,7 +4,11 @@ export const Loading = () => {
   return (
     <div className="loading-container">
       <div className="logo-loading">
-        <Image width={55} src="/images/logo-dan-toma.png" alt="logo dan toma" />
+        <img
+          // width={55}
+          src="/images/logo-dan-toma.png"
+          alt="logo dan toma"
+        />
         <span className="loading-logo-text">DAN TOMA</span>
       </div>
 

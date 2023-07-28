@@ -71,12 +71,16 @@
 }
 
 .section-about-number-circle.number-one-circle {
-  left: -7rem;
-  top: -16rem;
+  // left: -7rem;
+  // top: -16rem;
+  left: -3rem;
+  top: -11rem;
 }
 .section-about-number-circle.number-two-circle {
-  right: -8rem;
-  top: 1rem;
+  // right: -8rem;
+  right: -2rem;
+  // top: 1rem;
+  top: 16rem;
 }
 .section-about-number-circle.number-three-circle {
   left: -2rem;
@@ -88,12 +92,16 @@
 }
 
 .section-about-number.number-one {
-  top: -20rem;
-  left: -12rem;
+  // top: -20rem;
+  // left: -12rem;
+  top: -12rem;
+  left: -6rem;
 }
 .section-about-number.number-two {
-  top: -1rem;
-  right: -12rem;
+  // top: -1rem;
+  // right: -12rem;
+  top: 13rem;
+  right: -5rem;
 }
 .section-about-number.number-three {
   bottom: -105rem;
@@ -214,7 +222,8 @@
   font-family: "Arial-Black";
   -webkit-text-stroke: 2rem rgba(#eaf0ff, 0.6);
   position: absolute;
-  right: 44.3rem;
+  // right: 44.3rem;
+  right: 20.3rem;
   top: 50%;
   transform: translateY(-50%);
   background-repeat: repeat;

@@ -37,7 +37,7 @@ const NavbarMegaMenu = () => {
           {navbarMegeMenuDataLeft.map((navItemLeft) => (
             <li key={navItemLeft.id} className="mega-menu-item-tab">
               <Link
-                href={navItemLeft.path}
+                href={navItemLeft.path ?? ""}
                 className={`mega-menu-item-link ${
                   navItemLeft.path === router.pathname ? "active" : ""
                 }`}
@@ -432,7 +432,7 @@ const NavbarMegaMenu = () => {
         <ul className="mega-menu-list mega-menu-list-right">
           {navbarMegeMenuDataRight.map((itemRight) => (
             <li className="mega-menu-item-tab" key={itemRight.id}>
-              <Link href={itemRight.path} className="mega-menu-item-link">
+              <Link href={itemRight.path ?? ""} className="mega-menu-item-link">
                 {itemRight.tab ? itemRight.tab : itemRight.iconCart}
               </Link>
             </li>
