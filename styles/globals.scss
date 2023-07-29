@@ -14,6 +14,8 @@
 @import "../components/SignUp/sign-up.scss";
 @import "../components/FormSteps/form-steps.scss";
 
+@import "../components/UserSettings/user-settings.scss";
+
 @import "../components/SectionAbout/section-about.scss";
 
 @import "../components/Loading/loading.scss";
@@ -23,6 +25,7 @@
 @import "./courses-page.scss";
 @import "./course-page.scss";
 @import "./checkout.scss";
+@import "./user.scss";
 
 @mixin font($font-family, $font-file) {
   @font-face {

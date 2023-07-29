@@ -1,0 +1,181 @@
+.user-settings-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-settings-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1f2431;
+  border-radius: 0.5rem;
+  max-width: 41.6rem;
+  width: 100%;
+  padding: 6rem;
+  gap: 6rem;
+}
+
+.user-settings-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.user-settings-form-group-title {
+  margin-bottom: 3rem;
+  h2 {
+    color: $color-light-blue;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-family: "Montserrat-SemiBold";
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1rem;
+      width: 4rem;
+      height: 0.3rem;
+      background-color: #5c69e3;
+    }
+  }
+}
+
+.user-settings-form-profile-avatar {
+  display: flex;
+  gap: 2rem;
+}
+
+.user-settings-form-profile-image-wrapper {
+  width: 8rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.user-settings-form-profile-icon {
+  position: absolute;
+  top: 0;
+  right: -0.5rem;
+  z-index: 1;
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    // font-size: 2.5rem;
+    fill: #6492ff;
+  }
+}
+.user-settings-form-profile-btn {
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  font-family: "Montserrat-Regular";
+  line-height: 1.3rem;
+  margin-top: 1rem;
+}
+.user-settings-form-profile-image {
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  border-radius: 100%;
+  background-color: rgba(#000000, 0.5);
+}
+.user-settings-form-profile-btn {
+  font-size: 1rem;
+  font-family: "Montserrat-Regular";
+  line-height: 1.3rem;
+  color: #6492ff;
+}
+.user-settings-form-upload-circle {
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: rgba(#dfe3ff, 0.5);
+  font-size: 0.9rem;
+  font-family: "Montserrat-Regular";
+  line-height: 1rem;
+  color: $color-light-blue;
+}
+
+.user-settings-form-info {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-family: "Montserrat-Regular";
+  color: #9396a2;
+  margin-bottom: 1.5rem;
+}
+
+.user-settings-form-upload-btn {
+  font-size: 1.2rem;
+  font-family: "Montserrat-Regular";
+  line-height: 1.5rem;
+  color: $color-light-blue;
+  padding: 1rem;
+  width: 12.6rem;
+  height: 3.5rem;
+  border: 0.1rem solid #9396a2;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.user-settings-form-row {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 1.4rem;
+    font-family: "Montserrat-Regular";
+    line-height: 1.8rem;
+    color: #9396a2;
+  }
+
+  input {
+    width: 29.6rem;
+    height: 5.1rem;
+    background-color: #000000;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #000;
+    color: $color-light-blue;
+    caret-color: $color-light-blue;
+    padding: 1.6rem 2rem;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $color-blue;
+      border-color: $color-blue;
+      transition: border 0.2s ease-out;
+    }
+    &:focus::placeholder {
+      color: transparent;
+    }
+  }
+}
+
+.user-settings-form-btn-wrapper {
+  max-width: 29.6rem;
+  max-height: 5.1rem;
+  display: flex;
+}
+.user-settings-form-btn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 2.6rem;
+  background-color: #000;
+  color: #9396a2;
+  padding: 1.6rem 11.6rem;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+
+  &:hover {
+    background-color: $color-blue;
+    color: $color-light-blue;
+    transition: 0.2s ease-out;
+  }
+}
